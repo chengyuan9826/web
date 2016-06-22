@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>学易幼儿园</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript">
+$(function() {
+	var i = 0; 
+	var number = $(".banner li").size()-1; 
+	function move(){
+		i++;	
+		if(i > number){						
+			i=0;	
+		}
+		$(".banner li").eq(i).fadeIn().siblings().hide();
+	}
+	var action = setInterval(move,5000);
+	$(".banner li").hover(function(){
+		clearInterval(action);
+		i = $(this).index();
+	},function(){
+		action = setInterval(move,5000);	
+	})	
+	$(".prev").click(function(){
+		clearInterval(action);
+		i-=1;
+		if(i<0){i=number;}
+		$(".banner li").eq(i).fadeIn().siblings().hide();
+	})		
+	$(".next").click(function(){
+		clearInterval(action);
+		i+=1;
+		if(i>number){i=0;}
+		$(".banner li").eq(i).fadeIn().siblings().hide();
+	})		
+})	
+</script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="logo-area">
+    	<div class="wrapper clearfix">
+        	<a class="fl sublogo"></a>
+            <ul class="clearfix fl mu-list">
+            	<li><a href="#2" target="_blank">首页</a></li>
+                <li><a href="#2" target="_blank">幼儿成长专家</a></li>
+                <li><a href="#2" target="_blank">萌宝日志</a></li>
+                <li><a class="current" href="#2" target="_blank">幼儿园入驻</a></li>
+                <li><a href="#2" target="_blank">关于我们</a></li>
+            </ul>
+            <div class="fr lg-area">
+            	<input type="text"/>
+                <input class="pd-int" type="text"/>
+            	<a href="#2">登录</a>
+                <a href="#2" class="gn">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+    	<div class="jCarouselLite">
+            <ul>
+                <li class="bn1"></li>
+                <li class="bn2"></li>
+                <li class="bn3"></li>
+                <li class="bn1"></li>
+                <li class="bn1"></li>
+                <li class="bn1"></li>
+            </ul>
+            <a href="#2" class="prev"></a>
+            <a href="#2" class="next"></a>
+        </div>
+    </div>
+    <div class="sv-info">
+    	<div class="oursv"><span>我们的服务</span></div>
+        <p>幼儿园专家系统是全国教育科学"十二五"规划课题"智慧学习环境的构建与应用研究"子课题<br/>
+——幼教智慧教育的研究成果。</p>
+    </div>
+    <div class="wrapper cont clearfix">
+    	<div class="fl item sd-area">
+        	<div class="tit">幼儿成长专家</div>
+            <div class="clearfix sub-mod">
+            	<a class="fl" href="#2">
+                	<dl>
+                    	<dt><img src="images/yzd.png" alt=""/></dt>
+                        <dd>幼儿成长专家园长端</dd>
+                    </dl>
+                    <div class="shd"><div class="ov">幼儿成长分析汇总<span>最专业</span></div><div class="bg"></div></div>
+                </a>
+                <a class="fr" href="#2">
+                	<dl>
+                    	<dt><img src="images/jsd.png" alt=""/></dt>
+                        <dd>幼儿成长专家教师端</dd>
+                    </dl>
+                    <div class="shd"><div class="ov">幼儿在园活动记录<span>最全面</span></div><div class="bg"></div></div>
+                </a>
+            </div>
+        </div>
+        <div class="fr item">
+        	<div class="tit">萌宝日志</div>
+            <div class="clearfix sub-mod">
+            	<a class="fl" href="#2">
+                	<dl>
+                    	<dt><img src="images/bbd.png" alt=""/></dt>
+                        <dd>萌宝日志</dd>
+                    </dl>
+                    <div class="shd"><div class="ov">实时家园互通<span>更放心</span></div><div class="bg"></div></div>
+                </a>
+            </div>
+        </div>
+    </div>
+	<div class="footer">
+    	Copyright@2015北京凤凰学易科技有限公司<br/>
+学科网 zxxk.com 版权所有 京ICP备12013499号 京ICP证080135号 北京市公安局海淀分局备案号：1101081948<br/>
+本站常年法律顾问：汤海涛律师 北京北环律师事务所
+    </div>
+</body>
+</html>

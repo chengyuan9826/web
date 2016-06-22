@@ -1,0 +1,21 @@
+   智慧幼儿园修改说明 2016-5-24
+   一、sc-enter.html
+       1、修改sc-enter.html页面类header部分；
+       2、修改sc-enter.html页面类logo-area部分；
+       3、修改sc-enter.html页面类enter-main 和 类enter-right-mes部分；
+       注：修改的地方在html文件中使用TODO进行标注，在文件中搜索TOOD即可定位到；
+   二、rzfinish.html
+       1、修改rzfinish.html页面类 tst-main rzfinish部分；
+       注：修改的地方在html文件中使用TODO进行标注，在文件中搜索TOOD即可定位到；
+   三、添加页面
+      1、添加login.html;
+      2、添加forgetPwd.html;
+      3、添加forgetPwd-code.html;
+      4、添加forgetPwd-new-pwd.html;
+      5、添加forgetPwd-new-success.html;
+   四、style.css
+      添加的新添加的样式在该文件底部，从第200行开始，使用注释（/*2016-5-23 update by chengyuan*/）进行标注；
+   五、common.js
+      新添加的脚本在该文件的底部,从第38行开始使用注释（/*update by chengyuan 2016-5-24*/）进行标注
+   六、images
+      在images文件夹中添加了一部分图片，图片名称皆以ch-*开头，比如ch-icon.png；

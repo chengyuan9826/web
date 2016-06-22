@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>注册</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+
+<body>
+    <div class="min-ht">
+        <div class="pdt">
+            <div class="header"></div>
+            <div class="logo-area">
+                <div class="wrapper clearfix">
+                    <a class="fl sublogo"></a>
+                    <div class="fl per">个人用户注册</div>
+                    <div class="fr lg-area">
+                        <input type="text"/>
+                        <input class="pd-int" type="text"/>
+                        <a href="#2">登录</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="reg-main">
+                    <ul class="clearfix step">
+                        <li class="gn">第一步（个人信息填写）</li>
+                        <li>第二步（完善资料）</li>
+                        <li>注册成功</li>
+                    </ul>
+                    <div>
+                        <div class="login-int tst-main step-det step1">
+                            <p class="step-tit">第一步：个人信息填写</p>
+                            <div class="clearfix int-item">
+                                <span>手机号</span>
+                                <input type="text"/>
+                            </div>
+                            <div class="clearfix int-item">
+                                <span>登录密码</span>
+                                <input type="text" value="请您设置登陆密码" onfocus="if(this.value=='请您设置登陆密码'){this.value='';this.style.color='#333';}" onblur="if(this.value==''){this.value='请您设置登陆密码';this.style.color='#999';}" autocomplete="off"/>
+                            </div>
+                            <div class="clearfix int-item">
+                                <span>确认密码</span>
+                                <input type="text"/>
+                            </div>
+                            <div class="clearfix int-item short">
+                                <span>验证码</span>
+                                <input type="text"/>
+                                <div class="fr clearfix yzimg"><img class="fl" src="images/yanzheng.jpg"/><a class="fl">换一张</a></div>
+                            </div>
+                            <div class="clearfix int-item">
+                                <span></span>
+                                <div class="fl agr-area clearfix">
+                                    <input class="ckbtn" type="checkbox" checked/><a href="#2">同意注册条款</a>
+                                </div>
+                                <input class="crt-btn next-step" type="button" value="提  交"/>
+                            </div>
+                        </div>
+                        <div class="clearfix step-det" style="display:none">
+                        	<div class="fl">
+                            	<p class="step-tit">第二步：完善资料</p>
+                                <div class="enter-main">
+                                    <div class="clearfix ent-item">
+                                        <div class="ck-sld fl hv-area">
+                                            <span class="">省份</span>
+                                            <ul class="sld-area">
+                                                <li>北京市</li>
+                                                <li>河北省</li>
+                                                <li>河南省</li>
+                                                <li>北京市</li>
+                                                <li>河北省</li>
+                                                <li>河南省</li>
+                                            </ul>
+                                        </div>
+                                        <div class="ck-sld fl hv-area">
+                                            <span class="">市/县</span>
+                                            <ul class="sld-area">
+                                                <li>衡水市</li>
+                                                <li>石家庄</li>
+                                                <li>保定市</li>
+                                                <li>石家庄</li>
+                                                <li>保定市</li>
+                                            </ul>
+                                        </div>
+                                        <div class="ck-sld fl wt hv-area">
+                                            <span class="">区</span>
+                                            <ul class="sld-area">
+                                                <li>朝阳区</li>
+                                                <li>房山区</li>
+                                                <li>大兴区</li>
+                                                <li>朝阳区</li>
+                                                <li>房山区</li>
+                                                <li>大兴区</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tips">请选择所在地</div>
+                                    </div>
+                                    <div class="clearfix ent-item">
+                                        <div class="ck-sld fl lst hv-area">
+                                            <span>手动输入幼儿园名称</span>
+                                            <ul class="sld-area">
+                                                <li>北京市</li>
+                                                <li>河北省</li>
+                                                <li>河南省</li>
+                                                <li>北京市</li>
+                                                <li>河北省</li>
+                                                <li>河南省</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tips">请输入幼儿园</div>
+                                    </div>
+                                    <div class="clearfix ent-item">
+                                        <span class="fl tit">幼儿园规模</span>
+                                        <div class="ck-sld fl mid hv-area">
+                                            <span class="">50人以下</span>
+                                            <ul class="sld-area">
+                                                <li>朝阳区</li>
+                                                <li>房山区</li>
+                                                <li>大兴区</li>
+                                                <li>朝阳区</li>
+                                                <li>房山区</li>
+                                                <li>大兴区</li>
+                                            </ul>
+                                        </div>
+                                        <input class="fl int st" type="text"/>
+                                        <div class="tips">请输入联系人</div>
+                                    </div>
+                                    <div class="clearfix ent-cont">
+                                        <input class="crt-btn  next-step" type="button" value="提  交"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fl prompt">
+                            	<p>完善信息即可免费使用以下高级服务：<br/>1、宝宝成长专家园长端        <br/>2、幼儿成长专家教师端<br/>3、萌宝日志</p>
+                                <input type="button" value="放弃高级服务直接登录"/>
+                            </div>
+                        </div>
+                        <div class="step-det step3" style="display:none;">
+                        	<p><span>注册成功！</span></p> <p>恭喜您入驻成功！工作人员会尽快联系您！</p>
+                            <p>您可以免费使用以下服务：<br/>1、幼儿成长专家园长端<br/>2、幼儿成长专家教师端<br/>3、萌宝日志</p>
+                            <input type="button" value="开始体验"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer fxd">
+            Copyright@2015北京凤凰学易科技有限公司<br/>
+    学科网 zxxk.com 版权所有 京ICP备12013499号 京ICP证080135号 北京市公安局海淀分局备案号：1101081948<br/>
+    本站常年法律顾问：汤海涛律师 北京北环律师事务所
+    </div>
+</body>
+</html>

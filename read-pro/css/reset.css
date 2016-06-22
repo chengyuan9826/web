@@ -1,0 +1,83 @@
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+body{background:#fff;}
+a,a:hover{color:#333;}
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+/*头部*/
+.header {}
+.header .hgroupContainer{background-color: #f8f8f8; border-bottom: 1px solid #ccc;}
+.header .hgroup{width:1200px; margin:0px auto;line-height:38px;height:38px; color:#666;}
+.header .hgroup a{color:#666;}
+.header .hgroup a:hover{color:#f00;}
+.header .hgroup span{ float:left; margin-left:10px;}
+.span_top{float:left; margin-right:5px; padding-right:10px;}
+.span_top .xkwdl{ height:16px;float:left;margin-left:10px;}
+.span_top .qqdl{height:16px;float:left;margin-left:10px;}
+.pro_dh{width:90px;float:left; position:relative; z-index:4; margin-top:7px;height:28px;}
+.pro_dh .pagenum{line-height:20px;background: url("../images/top_sj.gif") no-repeat right;width: 60px;cursor:pointer;display: block;margin-right:10px; border-left:1px solid #ccc; padding-left:10px;}
+.pro_dh .ss{position:absolute;top:25px;right:-1px; width:90px;border:solid 1px #e1e1e1;border-top:0px;background-color:#f8f8f8;display:none;margin-top:3px;}
+.pro_dh .ss ul{margin:5px auto; line-height:28px;width:100%;}
+.pro_dh .ss ul li{text-align:center;display:block; float:left;width:80px; overflow:hidden;}
+.pro_dh .ss ul li a{color:#666;font-size:12px;width:80px;height:28px;display: block;margin:0 auto;}
+/*.pro_dh .ss ul li a:hover{color:#fff;background-color:#666;}*/
+.pro_dh .ss ul li a:hover{color:#08c;}
+
+.pro_dh .ss2col {width:160px;
+}
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+/*底部*/
+.footer{width:100%;border-top:2px solid #f0f0f0;background-color:#f8f8f8;}
+.footer_up{width:1200px;margin:20px auto 0;}
+.footer_left{float:left;width:682px;border-right:1px solid #EBEBEB;}
+.footer_left dl {float: left;padding: 0 10px;width: 150px;}
+.footer_left dl dt,.footer_cen dl dt,.footer_rig dl dt {font-size: 14px;font-weight: bold;height: 30px;line-height: 30px;padding-bottom:5px;}
+.footer_left dl dt.img1{background: url("../img/icon.png") no-repeat scroll 0 -116px;padding-left: 25px;}
+.footer_left dl dt.img2{background: url("../img/icon.png") no-repeat scroll 0 -596px;padding-left: 22px;}
+.footer_left dl dt.img3{background: url("../img/icon.png") no-repeat scroll 0 -538px;padding-left: 25px;}
+.footer_left dl dt.img4{background: url("../img/icon.png") no-repeat scroll 0 -478px;padding-left: 22px;}
+.footer_left dl dd{height:32px;line-height:32px;padding-left:25px;}
+.footer_left dl dd a,.footer_cen dl dd a{color:#333;}
+.footer_left dl dd a:hover,.footer_cen dl dd a:hover,.footer_rig dd a:hover{color:#f30;}
+.footer_cen{float:left;width:220px;padding-left:30px;border-right:1px solid #ebebeb;}
+.footer_cen dl dd{height:22px;line-height:22px;}
+.footer_cen dl.dl dd{float:left;padding-right:10px;*padding-right:5px;}
+.footer_cen dl dt.img5{background: url("../img/icon.png") no-repeat scroll 0 -417px;padding-left: 25px;}
+.footer_rig{width:236px;float:right;}
+.footer_rig dd {float: left;height: 86px;margin: 0 8px;text-align: center;width: 86px;}
+.footer_rig dd a{color:#333;height:32px;line-height:32px;width:86px;display:block;}
+.footer_down{width:100%;background-color:#fff;margin-top:20px;*margin-top:10px;}
+.foot{margin:0 auto;width:1200px;height:auto;}
+.footnav{width:1200px;height:40px;line-height:25px;color:#333;text-align:center;}
+.footnav a{font-size:12px;color:#333;padding:0 10px;}
+.foot p{text-align:center;font-size:12px;line-height:24px;}

@@ -1,0 +1,615 @@
+.sum-resource {
+    padding-bottom: 180px;
+    background: #fdf4d5;
+    min-width: 1200px;
+    font-family: "Microsoft Yahei", "SimSun";
+}
+
+.res-banner img {
+    display: block;
+    min-width: 1200px;
+    width: 100%;
+}
+
+.res-content {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.res-abstract {
+    position: relative;
+    padding: 50px 36px 40px 36px;
+    font-size: 18px;
+    color: #a00f0f;
+    line-height: 160%;
+    background: #ffe795;
+    text-indent: 36px;
+}
+
+.abstract-icon {
+    position: absolute;
+    top: -68px;
+    left: 38px;
+    width: 126px;
+    height: 104px;
+    background: url(../images/resource-icon.png) no-repeat 0 0;
+}
+
+.res-abstract .top-icon {
+    position: absolute;
+    width: 31px;
+    height: 32px;
+    top: 0;
+    background: url(../images/resource-icon.png) no-repeat;
+}
+
+.res-abstract .left-gabled {
+    left: 0;
+    background-position: -155px 0;
+}
+
+.res-abstract .right-gabled {
+    right: 0;
+    background-position: -194px 0;
+}
+
+.res-abstract span {
+    font-size: 24px;
+    color: #178b56;
+}
+
+.res-tab {
+    margin-top: 34px;
+}
+
+.res-tab .tab-item {
+    width: 45.8%;
+    height: 128px;
+    background: url(../images/resource-icon.png) no-repeat;
+}
+
+.res-tab .tab-course {
+    float: left;
+    background-position: 0 -115px;
+}
+
+.res-tab .tab-paper {
+    float: right;
+    background-position: 0 -242px;
+}
+
+.course-box {
+    margin-top: 60px;
+}
+
+.mod-title {
+    padding-left: 35px;
+    font-weight: normal;
+    font-size: 36px;
+    color: #df3333;
+    background: url(../images/resource-icon.png) -576px 12px no-repeat;
+}
+
+.course-content {
+    position: relative;
+    padding-top: 54px;
+    margin-top: 56px;
+    background: #fff;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+}
+
+.course-tip {
+    position: absolute;
+    top: -27px;
+    left: 50%;
+    width: 272px;
+    height: 72px;
+    margin-left: -136px;
+    background: url(../images/resource-icon.png) no-repeat -266px 0;
+    font-size: 0;
+}
+
+.course-subject {
+    padding: 30px 26px 44px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.subject-title {
+    float: left;
+    width: 64px;
+    height: 180px;
+    font-size: 0;
+    background: url(../images/resource-icon.png) no-repeat 0 -380px;
+}
+
+.subject-res {
+    float: left;
+}
+
+.subject-res li {
+    float: left;
+    margin-left: 35px;
+    width: 180px;
+}
+
+.subject-res .comps-media {
+    display: block;
+    position: relative;
+}
+
+.subject-res .comps-media img {
+    display: block;
+    width: 100%;
+}
+
+.subject-res .icon-open {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    width: 60px;
+    height: 60px;
+    background: url(../images/resource-icon.png) -540px -40px no-repeat;
+}
+
+.subject-res .subject-describe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.comps-download {
+    display: block;
+    height: 44px;
+    line-height: 52px;
+    text-align: center;
+    background: #ffb14b;
+}
+
+.comps-download .icon {
+    display: inline-block;
+    width: 70px;
+    height: 22px;
+    background: url(../images/resource-icon.png) no-repeat -446px -78px;
+}
+
+.subject-look-more {
+    padding-top: 34px;
+    padding-right: 152px;
+    position: relative;
+    height: 40px;
+    clear: both;
+    line-height: 40px;
+    text-align: right;
+    font-size: 16px;
+    color: #f6a234;
+}
+
+.subject-look-more .click-btn {
+    position: absolute;
+    right: -18px;
+    top: 33px;
+    width: 156px;
+    height: 74px;
+    background: url(../images/resource-icon.png) no-repeat -226px -376px;
+}
+
+.course-math .subject-title {
+    background-position: -74px -382px;
+}
+
+.course-math .comps-download {
+    background: #93baf4;
+}
+
+.course-math .subject-look-more {
+    color: #93baf4;
+}
+
+.course-math .click-btn {
+    background-position: -225px -450px;
+}
+
+.course-english .subject-title {
+    background-position: -151px -382px;
+}
+
+.course-english .comps-download {
+    background: #6fc37d;
+}
+
+.course-english .subject-look-more {
+    color: #6fc37d;
+}
+
+.course-english .click-btn {
+    background-position: -225px -526px;
+}
+
+.course-other {
+    position: relative;
+    margin-top: 78px;
+    padding: 100px 0 80px;
+    background: #fff;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+}
+
+.course-other-title {
+    position: absolute;
+    top: -27px;
+    left: 50%;
+    width: 270px;
+    height: 70px;
+    margin-left: -135px;
+    font-size: 0;
+    background: url(../images/resource-icon.png) no-repeat -330px -600px;
+}
+
+.course-other-item {
+    margin-left: 29px;
+    float: left;
+    width: 264px;
+
+}
+
+.course-other-item img {
+    display: block;
+    width: 100%;
+}
+
+.paper-box {
+    margin-top: 50px;
+}
+
+.paper-content {
+    position: relative;
+    padding: 90px 26px 60px;
+    margin-top: 54px;
+    background: #fff;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+}
+
+.paper-content .paper-tip {
+    position: absolute;
+    top:-27px;
+    left:50%;
+    margin-left: -148px;
+    width:295px;
+    height:72px;
+    background: url(../images/resource-icon.png) 0 -601px no-repeat;
+    font-size: 0;
+}
+
+.paper-module{
+    float: left;
+    width:33.333%;
+}
+.paper-module-title{
+    margin: 0 38px;
+    height:26px;
+    background: url(../images/resource-icon.png)0 -673px no-repeat;
+    font-size: 0;
+}
+.paper-name-list{
+    padding: 12px 36px 0;
+    border-right:1px dotted #d8d8d8;
+}
+.paper-name-list li{
+    margin-top: 24px;
+}
+.paper-name-list a{
+    font-size: 16px;
+    color: #333;
+}
+
+.paper-name-list a:hover{
+    text-decoration:underline;
+    color:#df3333;
+}
+
+.paper-math .paper-module-title{
+    background-position: 0 -700px ;
+}
+
+.paper-english .paper-module-title{
+    background-position: 0 -730px ;
+}
+.paper-mocks.paper-content  .paper-tip{
+   background-position: -406px -387px;
+}
+.paper-tests.paper-content  .paper-tip{
+    background-position: -406px -473px;
+}
+
+.goTop{
+    position: fixed;
+    right:10%;
+    bottom:100px;
+    width:120px;
+    height:36px;
+}
+.goTop .topBtn{
+    height:36px;
+    width:36px;
+    background: url(../images/resource-icon.png) -480px -555px no-repeat;
+    cursor: pointer;
+
+}
+.goTop:hover .topTxt{
+
+    display: block;
+}
+.goTop:hover .topBtn{
+    background-position:-441px -555px ;
+}
+.goTop .topTxt{
+    display: none;
+    position: absolute;
+    right: 0;
+    top:0;
+    width:92px;
+    height: 36px;
+    background: url(../images/resource-icon.png)-521px -555px no-repeat;
+}
+
+
+
+.model{
+    display: none;
+}
+.fixedBox{
+    height:100%;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    background: rgba(0,0,0,0.8);
+    z-index:99;
+}
+
+.mediaShow{
+    position: relative;
+    margin: 120px auto 0;
+    width:683px;
+    background: #000;
+}
+.fixedBox .close{
+    position: absolute;
+    top:-10px;
+    right:-20px;
+    width:40px;
+    height:20px;
+    line-height: 20px;
+    font-size: 14px;
+    background: #ff7f31;
+    color:#fff;
+    text-align: center;
+    -webkit-border-radius:4px;
+    -o-border-radius:4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.openBtn{
+    display: none;
+    position: absolute;
+    left:34px;
+    bottom:64px;
+    height:58px;
+    width:58px;
+    background: url(../images/composition-icon.png) 0 -154px no-repeat;
+    cursor: pointer;
+}
+.mediaControl .timeLine{
+    position: relative;
+    height:4px;
+    width:100%;
+    background: #404040;
+}
+
+.mediaControl .hadShow{
+    position: absolute;
+    left:0;
+    top:0;
+    height:100%;
+    background: #ee5a00;
+}
+.mediaControl .slideBtn{
+    position: absolute;
+    height:6px;
+    width:20px;
+    top:-2px;
+    left:0;
+    background: #fff;
+    border:1px solid #b4b4b0;
+    cursor: pointer;
+}
+.mediaControl .showCurrentTime{
+    display: none;
+    position: absolute;
+    top:-24px;
+    left:0;
+    width:44px;
+    height: 24px;
+    line-height: 22px;
+    background: url(../images/composition-icon.png) 0 -221px no-repeat;
+    color:#fff;
+    font-size: 14px;
+    text-align: center;
+}
+.mediaControl:hover .showCurrentTime{
+    display: block;
+}
+.controlTool{
+    padding: 8px 20px 8px 28px;
+    background: #000;
+}
+.controlBtnLeft{
+    float: left;
+}
+.openPause{
+    float: left;
+    padding: 0 16px;
+    height:14px;
+    border:1px solid #fff;
+    border-bottom: 0;
+    border-top: 0;
+}
+.openPauseBtn{
+    display:block;
+    height:16px;
+    line-height: 16px;
+    width: 16px;
+    background: url(../images/composition-icon.png) 4px -263px no-repeat;
+    cursor: pointer;
+}
+.openPauseBg{
+    background-position:-15px -263px ;
+}
+
+.controlBtnLeft .timeShow{
+    float: left;
+    margin-left: 14px;
+    font-size: 12px;
+    color:#fff;
+}
+
+.controlBtnRight{
+    float: right;
+}
+.controlBtnRight .volumeBox{
+    float: left;
+    padding-top: 5px;
+    height:14px;
+}
+.controlBtnRight .maxVolume{
+    margin-top: 4px;
+    float: left;
+    position: relative;
+    width:70px;
+    height:4px;
+    background: #333;
+}
+.controlBtnRight .currentVolume{
+    position: absolute;
+    left:0;
+    top:0;
+    height:4px;
+    width:50%;
+    background: #ee5a00;
+}
+.volumeBtn{
+    position: absolute;
+    left:0;
+    top:-2px;
+    height:8px;
+    width:8px;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+.volumeStatic{
+    width:14px;
+    height:14px;
+    float: left;
+    cursor: pointer;
+    background: url(../images/composition-icon.png) no-repeat 0 -287px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 14px;
+    color: #fff;
+}
+.controlBtnRight .entireBtn{
+    float: right;
+    margin-left: 30px;
+    height:16px;
+    width:16px;
+    background: url(../images/composition-icon.png) no-repeat 0 -306px;
+    cursor: pointer;
+}
+
+.mediaShow .popWindow{
+    display: none;
+    width:290px;
+    position: absolute;
+    top:20%;
+    left:50%;
+    margin-left: -145px;
+    padding: 26px 0;
+    background: rgba(51,51,51,0.9);
+}
+
+.mediaShow .tipText{
+    padding: 0 30px;
+    text-align: center;
+    line-height: 170%;
+    font-size: 20px;
+    color:#fff;
+}
+
+.mediaShow .linkBtn{
+    display: block;
+    margin: 22px auto 0;
+    width:106px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background: #ff7f31;
+    color:#fff;
+    font-size: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
