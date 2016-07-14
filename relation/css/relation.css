@@ -1,0 +1,21 @@
+html{height:100%;}
+.select-contact{position:fixed;top:0;right:0;left:0;height:100%; width:100%;background:#fff;}
+.contact-static{position:fixed;top:0;right:0;left:0;z-index:99;background:#fff;}
+.contact-static header{background:#444;height:40px;line-height:40px;}
+.contact-static header button{border:none;background:none;width:56px;text-align:center;hieght:40px;line-height:40px;}
+.contact-static header .cancel{float:left;font-size:16px;color:#ecebeb;}
+.contact-static header .send{float:right;font-size:16px;color:#13d311;}
+.select-con{padding:10px;border-bottom:1px solid #f0efef;}
+.select-con li{float:left;margin:4px;}
+.contact-search{padding:10px 20px 10px 30px;background:url(../images/zoom22.png) no-repeat 10px 18px;border-bottom:1px solid #e3e4e5;}
+.contact-search input[type='text']{border:none;height:30px;font-size:15px;}
+.contact-submit{float:right;width:40px;height:30px;background:url(../images/arr.jpg) center no-repeat; border:none;}
+.contact-wrap{box-sizing:border-box;-webkit-box-sizing:border-box; height:100%;overflow:scroll;}
+.contact-list{}
+.contact-list li{border-bottom:1px solid #e3e4e5;overflow:hidden;box-sizing:border-box;-webkit-box-sizing:border-box;}
+.contact-list .contact-hd{padding:8px 16px;float:left;line-height:normal;}
+.contact-list .contact-name{float:left;font-size:14px; font-family:"Microsoft Yahei", "SimSun";line-height:40px;height:40px;}
+.contact-list .contact-radio{float:right;position:relative;line-height:40px;height:40px;width:50px;}
+.contact-list .contact-radio input[type='checkbox']{display:none;}
+.contact-list .contact-radio label{position:absolute;top:0;display:block;height:40px;width:100%; background:url(../images/nochecked.png) no-repeat center;}
+.contact-list .contact-radio label.active{ background:url(../images/checked.png) no-repeat center;}

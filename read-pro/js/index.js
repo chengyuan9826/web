@@ -27,7 +27,37 @@ $(function(){
         $(this).find('.ss').stop().slideUp(100);
     });
     video();
+    showVideo();
+    closeVideo();
 });
+
+var videoPop=$('.popup');
+function showVideo(){
+    var videoWrap=$('.classroom-con');
+    var $video=videoPop.find('#popup-video');
+    videoWrap.on('click',function(){
+        var $href=$(this).attr('href');
+        $video.attr('src',$href);
+        var scrollTop=$(window).scrollTop();
+       /* $('#popup-object').find('param[name=FileName]').attr('value',$href);*/
+        var $objSrc=$href?$href.split('.')[0]:$href;
+        $('#objectSrc').attr('value',$objSrc+'1.mov');
+        $(window).on('scroll', function () {
+            $(this).scrollTop(scrollTop);
+        });
+        videoPop.show();
+        return false;
+    });
+}
+function closeVideo(){
+    var closeBtn=$('.close-btn');
+    closeBtn.on('click',function(){
+        videoPop.find('#popup-video').attr('src','');
+        $('#objectSrc').attr('value','');
+        videoPop.hide();
+        $(window).off('scroll');
+    });
+}
 function sideShow(){
     $(window).scroll(function(){
       if($(window).scrollTop()>=600){
