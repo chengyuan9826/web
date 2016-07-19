@@ -3,7 +3,7 @@
  */
 var timeCon = $('.countdown-time');
 $(function () {
-    diffDay('2016/6/7');//倒计时
+    diffDay('2017/6/7');//倒计时
     goNav();//导航
     goTop();//返回顶部
 //复选框
@@ -25,9 +25,9 @@ nav.on('mouseleave',function(){
     $(this).find('.sld-area').stop().slideUp(100);
 });
 function diffDay(target) {
-    var todyTime = new Date();
-    var targetTime = new Date(target);
-    var diffTime = targetTime - todyTime;
+    var todyTime = new Date();//获取今天的时间
+    var targetTime = new Date(target);//格式化用户传入的时间参数
+    var diffTime = targetTime - todyTime;//计算两个时间之间的差值（毫秒）
     var diffDay = 0;
     if (diffTime > 0) {
         diffDay = parseInt(diffTime / 1000 / 3600 / 24);
@@ -42,6 +42,23 @@ function diffDay(target) {
     }
 }
 
+function diffDay1() {
+    var todyTime = new Date();//获取今天的时间
+    var targetTime = new Date('2016/6/7');//格式化用户传入的时间参数
+    var diffTime = targetTime - todyTime;//计算两个时间之间的差值（毫秒）
+    var diffDay = 0;
+    if (diffTime > 0) {
+        diffDay = parseInt(diffTime / 1000 / 3600 / 24);
+        if (diffDay <1000) {
+            timeCon.find('.first').html(parseInt(diffDay / 100));
+            timeCon.find('.second').html(parseInt((diffDay / 10) % 10));
+            timeCon.find('.third').html(parseInt((diffDay % 100) % 10));
+        }
+    }
+    else {
+        timeCon.html('高考过了');
+    }
+}
 /*导航跳转*/
 function goNav() {
     $('.nav-link a').on('click', function () {
