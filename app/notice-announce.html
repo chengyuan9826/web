@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布公告</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/list.css"/>
+</head>
+<body>
+<div class="announce">
+    <header class="notice-header"><a href="" class="go-back"></a> <h3>发布通告</h3></header>
+    <div class="announce-link clearfix">
+        <span class="announce-type">公告类型</span>
+        <span class="select-type">选择公告类型</span>
+        <div class="show-window">
+            <h3 class="show-title">公告类型</h3>
+            <ul class="show-list js-list">
+                <li>学校通知</li>
+                <li>学生通知</li>
+            </ul>
+            <button class="cancel">取消</button>
+        </div>
+    </div>
+    <div class="announce-box">
+        <h3>标题</h3>
+        <input class="announce-tit-con" type="text" placeholder="请输入公告标题">
+        <div class="text-num">0/20</div>
+    </div>
+    <div class="announce-box">
+        <h3>内容</h3>
+        <textarea name="" id="" class="announce-content" cols="30" rows="6" placeholder="请输入公告内容"></textarea>
+        <div class="text-num">0/800</div>
+    </div>
+    <div class="announce-link clearfix">
+        <span class="announce-type">接收人</span>
+        <span class="select-type">请选择接收人</span>
+        <div class="show-window">
+                <h5 class="show-title">接收人</h5>
+                <ul class="show-list">
+                    <li>
+                        <span class="show-name">教务处</span>
+                        <ul class="show-list js-list" >
+                            <li>王老师</li>
+                            <li>张老师</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="show-name">年级组</span>
+                        <ul class="show-list js-list" >
+                            <li>李老师</li>
+                            <li>马老师</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="show-name">政教处</span>
+                        <ul class="show-list js-list">
+                            <li>朱老师</li>
+                            <li>马老师</li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="cancel">取消</button>
+        </div>
+    </div>
+    <div class="announce-box">
+        <h3>附件</h3>
+       <div class="enclosure clearfix">
+           <ul class="enclosure-list">
+               <li><img src="images/upload-img.png" alt=""></li>
+               <li><img src="images/upload-img.png" alt=""></li>
+           </ul>
+           <button class="enclosure-btn">+</button>
+       </div>
+    </div>
+</div>
+<div class="announce-btn"><a class="btn" href="notice-announce.html">发布公告</a></div>
+<script src="js/zepto.min.js"></script>
+<script src="js/notice.js"></script>
+</body>
+</html>

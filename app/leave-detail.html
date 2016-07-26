@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请假详细信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/leave.css"/>
+</head>
+<body>
+<div class="leave-det">
+    <header class="notice-header"><a href="" class="go-back"></a><h3>请假</h3></header>
+    <div class="leave-det-tit">基本信息</div>
+    <div class="leave-det-content">
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon1.png" alt=""></i><span class="txt">请假天数</span></div><span class="value">一天</span></div>
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon2.png" alt=""></i><span class="txt">请假类型</span></div><span class="value">事假</span></div>
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon3.png" alt=""></i><span class="txt">开始时间</span></div><span class="value">2016-07-12 星期四 08:00</span></div>
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon4.png" alt=""></i><span class="txt">结束时间</span></div><span class="value">2016-07-13 星期五 08:00</span></div>
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon5.png" alt=""></i><span class="txt">请假理由</span></div><span class="value">个人事务</span></div>
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon6.png" alt=""></i><span class="txt">申请老师</span></div><span class="value">马老师</span></div>
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon7.png" alt=""></i><span class="txt">申请时间</span></div><span class="value">2015-07-11 10:30</span></div>
+        <div class="leave-det-item leave-det-reason"><div class="key"><i class="pic"><img src="images/leave-icon8.png" alt=""></i><span class="txt">请假证明</span></div>
+            <ul class="reason-list"><li><a href=""><img src="images/upload-img.png" alt=""></a></li><li><a href=""><img src="images/upload-img.png" alt=""></a></li></ul></div>
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon9.png" alt=""></i><span class="txt"></span></div><span class="value">同意 王主任 2015-07-11 10:30</span></div>
+        <div class="leave-det-item"><div class="key"><i class="pic"><img src="images/leave-icon0.png" alt=""></i><span class="txt"></span></div><span class="value">同意 王主任 2015-07-11 10:30</span></div>
+
+    </div>
+</div>
+
+<!--未审核 start-->
+ <div class="leave-btn-list">
+     <button class="yes btn">同意</button>
+     <button class="no btn">不同意</button>
+ </div>
+<!--未审核 end-->
+
+<!--审核意见 start-->
+<div class="show-window">
+    <textarea name="" id="" cols="30" rows="10" class="reason-text" placeholder="请输入审核意见"></textarea>
+    <div class="reason-btn">
+        <button class="btn cancel">取消</button>
+        <button class="btn sure">提交</button>
+    </div>
+</div>
+<div class="shadow"></div>
+<!--审核意见 end-->
+
+<script src="js/zepto.min.js"></script>
+<script src="js/leave.js"></script>
+</body>
+</html>

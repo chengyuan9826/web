@@ -10,7 +10,8 @@
 </head>
 <body>
 <div class="virtue">
-    <header class="notice-header"><a href="" class="go-back"></a><h3>01班成绩统计</h3></header>
+    <header class="notice-header"><a href="" class="go-back"></a><h3>日常操行</h3></header>
+    <div class="virtue-wrap">
     <h3 class="virtue-name">基本信息</h3>
     <div class="virtue-object">
         <div class="object-item">
@@ -111,8 +112,6 @@
                 <li class="active">+1</li>
                 <li>+2</li>
                 <li>+3</li>
-                <li>+4</li>
-                <li>+5</li>
             </ul>
             <button class="cancel">取消</button>
         </div>
@@ -122,7 +121,7 @@
             <span class="object-name">评价描述</span>
         </div>
         <div class="judgments">
-            <textarea class="judge-txt" name="" id="" cols="30" rows="10" placeholder="请输入评价描述..."></textarea>
+            <textarea class="judge-txt" name="" id="" cols="30" rows="6" placeholder="请输入评价描述..."></textarea>
             <span class="text-num">0/200</span>
         </div>
     </div>
@@ -130,12 +129,17 @@
         <div class="object-item">
             <span class="object-name">评价证明</span>
         </div>
-        <div class="virtue-proof">
-            <button class="proof-btn">+</button>
+        <div class="virtue-proof clearfix">
+                <ul class="enclosure-list">
+                    <li><img src="images/upload-img.png" alt=""></li>
+                    <li><img src="images/upload-img.png" alt=""></li>
+                </ul>
+                <button class="enclosure-btn">+</button>
         </div>
     </div>
-    <button class="virtue-submit">提交</button>
     <div class="shadow"></div>
+    </div>
+    <button class="virtue-submit">提交</button>
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/virtue.js"></script>
