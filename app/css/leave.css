@@ -21,8 +21,9 @@ html,body{height:100%;}
 .notice-header{position:relative;padding:1rem 0;background: #00cc99;font-size: 1.6rem;text-align: center;color:#fff;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif}
 .notice-header h3{font-weight:normal;}
 .notice-header .go-back{position:absolute;left:1.36rem;width:1rem;height:2.27rem;font-weight:normal;background: url(../images/back.png) no-repeat 0 center;}
-.leave{max-width: 750px;margin: 0 auto;padding-bottom: 4rem;}
-.leave-nav{display: flex;display: -webkit-flex;justify-content: space-around;}
+@media(max-width: 440px){.notice-header .go-back {background-size: 12px 19px; }}
+.leave{padding-top:7rem;max-width: 750px;margin: 0 auto;padding-bottom: 4rem;}
+.leave-nav{display: flex;display: -webkit-flex;justify-content: space-around;background: #fff;}
 .leave-nav li{width:33.333%;}
 .leave-nav li a{display: block;height:4rem;line-height:4rem;text-align: center;font-size: 1.3rem;color:#333;border-bottom:1px solid #ccc;}
 .leave-nav li.active a{background:url(../images/nav-bg.png)no-repeat center 100%;}
@@ -56,9 +57,9 @@ html,body{height:100%;}
 .nav .nav-list a{display:block;height:4rem;text-align:center;color:#666;line-height:4rem;border-top:1px solid #ccc;font-size:1.2rem; }
 .nav .nav-list a.active{background: #00cc99;border-color: #00cc99;color: #fff;}
 .leave-list .look{color:#00cc99;}
-
+.leave-list{overflow: hidden;}
 /*请假详情*/
-.leave-det{max-width: 750px;margin: 0 auto;background: #eee;padding-bottom: 4rem;}
+.leave-det{padding-top:4rem;max-width: 750px;margin: 0 auto;background: #eee;padding-bottom: 4rem;}
 .leave-det-tit{padding-left:0.8rem;font-size:1.5rem;color:#4a4a4a;background:#fff;height:4rem;line-height:4rem;}
 .leave-det-content{margin-top:1rem;background: #fff;}
 .leave-det-item{display:flex;justify-content:space-between;align-content:center;align-items:center;padding:0 1.2rem 0 1.2rem;height:4rem;color:#333;border-top:1px solid #dbdbdb;}
@@ -73,6 +74,7 @@ html,body{height:100%;}
 .reason-list li img{width:100%;}
 .leave-btn-list{position: fixed;display:flex;justify-content:center;bottom:0;left:0;width:100%;}
 .leave-btn-list .btn{width:50%;height:3.6rem;border:1px solid #fff;background: #00cc99;color:#fff;font-size: 1.5rem;}
+.leave-btn-list .btn.submit{width: 100%;}
 .show-window{position: fixed;bottom:-60% ;left:0;width:100%;background: #eee; z-index: 2; }
 .show-window .reason-text{padding:1.4rem;font-size:1.1rem;border: 1px solid #dbdbdb;width:100%;border-left:none;border-right: none; }
 .reason-btn{margin-top: 1.2rem;padding-bottom:1rem;display:flex;justify-content: space-around;}

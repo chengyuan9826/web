@@ -4,8 +4,11 @@
 $(function(){
     downList($('.nav-name'));
     showSelect($('.nav-list'));
-    showWindow($('.leave-btn-list .no'));
+    showWindow($('.leave-btn-list .no'), $('.show-window'));
     cancel($('.reason-btn .cancel'));
+    /*leave-apply.html*/
+    show($('.js-item .value'));
+    getValue($(".show-list li"));
 });
 /*点击显示下拉菜单*/
 function downList(btn){
@@ -35,17 +38,34 @@ function showSelect(list){
 }
 
 /*显示弹出框*/
-function showWindow(btn){
+function showWindow(btn,win){
     btn.on('click',function(){
-        $('.show-window').animate({bottom:0},500);
+        win.animate({bottom:0},500);
         $('.shadow').show();
         return false;
     });
 }
-
 function cancel(btn){
     btn.on('tap',function(){
-        $(this).parents('.show-window').animate({bottom:'-60%'},500);
+        $('.show-window').css({bottom:'-60%'});
         $('.shadow').hide();
+    });
+}
+function getValue(btn){
+    btn.on('click',function(){
+        var txt=$(this).text();
+        btn.removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.show-window').prev().text(txt);
+        $(this).parents('.show-window').css({bottom:'-60%'});
+        $('.shadow').hide();
+    });
+}
+
+function show(btn){
+    btn.on('click',function(){
+        $(this).next('.show-window').animate({bottom:0},500);
+        $('.shadow').show();
+        return false;
     });
 }

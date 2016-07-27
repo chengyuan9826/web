@@ -46,22 +46,22 @@ body,html{height:100%;}
 .notice-list .list a{display: block;padding: 1.8rem 1.45rem;}
 .notice-list .list .item-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#333;font-size: 1.27rem;}
 .notice-list .list .item-detail{position:relative;margin-top:1rem;color:#999;font-size: 1.09rem;}
-.notice-list .list .type{position:absolute;right:0;color:#e77e1e;font-size: 1.09rem;}
+.notice-list .list .type{position:absolute;right:0;color:#999;font-size: 1.09rem;}
 /*详情页*/
 .notice-detail{max-width: 750px;margin: 0 auto;background: #fff;}
 .det-title{border-bottom: 1px solid #fff;padding-bottom: 0.72rem;}
 .det-title h3{padding-top:1rem;font-size: 1.3rem;color:#333;text-align: center;}
-.art-detail{margin-top:0.5rem;display: flex;display: -webkit-flex;justify-content:space-between;padding: 0 0.6rem;}
+.art-detail{margin-top:1rem;display: flex;display: -webkit-flex;justify-content:space-between;padding: 0 0.6rem;}
 .art-detail .time,.art-detail .author,.art-detail .type{display: flex;display: -webkit-flex;font-size: 0.9rem;color:#a4a4a4;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;}
 .notice-detail .art-con{padding: 1rem 1rem 2rem;font-size: 1.09rem; color: #666;line-height: 1.8rem;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif}
 .notice-detail .art-con p{text-indent: 2rem;}
 .art-read{display:flex;padding:0 1.27rem;justify-content:space-between;background: #fff;height:3rem;line-height: 3rem;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif}
 .art-read .have-read,.art-read .no-read{color:#7d7d7d;font-size: 1.09rem;}
-.art-read a i{color: #00cc99;}
+.have-read .num i,.no-read .num i{color: #00cc99;}
 .evaluate{margin-top: 1.18rem;}
 .evaluate-title{font-size: 1.09rem; color:#666;font-weight:normal;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif}
 .evaluate-list{padding: 0 0 2rem;}
-.evaluate-list .evaluate-item{margin-top: 8px;padding: 0.8rem 0.6rem;/*border-radius:6px;*/background: #eee;font-size: 1rem;line-height:1.2rem;color:#636363;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif}
+.evaluate-list .evaluate-item{margin-top: 8px;padding: 0.8rem 0.6rem;/*border-radius:6px;*/border-top:1px solid #ddd;font-size: 1rem;line-height:1.2rem;color:#636363;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif}
 .evaluate-list .evaluate-item .evaluate-art{text-indent: 2rem;line-height: 150%;}
 .evaluate-detail{margin-top: 1rem;display: flex;display:-webkit-flex;justify-content: space-between}
 .evaluate-detail .time{color:#999; }

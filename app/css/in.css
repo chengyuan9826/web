@@ -30,11 +30,11 @@ body,.school-index{height:100%;}
 .school-name{font-size:1.2857rem;text-align:center;height:3.21rem;line-height:3.21rem;color:#fcfcfc;background:#00ba9c;}
 .school-list{display:-webkit-flex;display:flex;flex-direction:row;flex-wrap:wrap;-webkit-flex-wrap:wrap;justify-content:flex-start;}
 .school-list li{width:25%;margin-top:1.07rem;}
-.school-list li span {display:block;margin-top:0.5rem;text-align:center;color:#333;font-size:1rem;}
+.school-list li span {display:block;margin-top:0.5rem;text-align:center;color:#333;font-size:0.6rem;}
 .school-list li a{display:block;}
 .school-list li img{display:block;max-width:100%;margin:0 auto;}
 @media(max-width:640px){.school-list li img{max-width:60%}}
-footer{position:absolute;bottom:0;width:100%;left:0;padding:15px 0 12px;background:#dcdcdc;}
+footer{position:absolute;bottom:0;width:100%;left:0;padding:15px 0 12px;border-top:1px solid #dcdcdc;}
 footer .f-list{display:flex;display:-webkit-flex;flex-direction:row;justify-content:space-between}
 footer .f-list li{width:25%;}
 footer .f-list a{display:block;color:#333;font-size:0.714rem;text-align:center}

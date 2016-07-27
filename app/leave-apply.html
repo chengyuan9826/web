@@ -10,16 +10,17 @@
 </head>
 <body>
 <div class="leave-det">
-    <header class="notice-header"><a href="" class="go-back"></a><h3>请假申请</h3></header>
+    <div class="static">    <header class="notice-header"><a href="" class="go-back"></a><h3>请假申请</h3></header></div>
+
     <div class="leave-det-tit">基本信息</div>
     <div class="leave-det-content">
         <div class="leave-det-item">
             <div class="key"><i class="pic"><img src="images/leave-icon1.png" alt=""></i><span class="txt">请假天数</span></div>
             <span class="value"><input class="num" placeholder="请输入" type="text">天</span></div>
-        <div class="leave-det-item">
+        <div class="leave-det-item js-item">
             <div class="key"><i class="pic"><img src="images/leave-icon2.png" alt=""></i><span class="txt">请假类型</span></div>
-            <span class="value">请选择</span>
-            <div class="show-window" style="display: none">
+            <span class="value">请选择请假类型</span>
+            <div class="show-window">
                 <h3 class="show-window-tit">请假类型</h3>
                 <ul class="show-list" >
                     <li class="active">事假</li>
@@ -34,17 +35,41 @@
                 </div>
             </div>
         </div>
-        <div class="leave-det-item">
+        <div class="leave-det-item js-item">
             <div class="key">
                 <i class="pic"><img src="images/leave-icon3.png" alt=""></i><span class="txt">开始时间</span>
             </div>
             <span class="value">选择起始时间</span>
+            <div class="show-window">
+                <ul class="show-list" >
+                    <li class="active">2014 05 23 08:40</li>
+                    <li >2014 04 21 08:40</li>
+                    <li >2015 05 21 08:40</li>
+                    <li >2016 02 21 08:40</li>
+                    <li >2017 08 21 08:40</li>
+                </ul>
+                <div class="reason-btn">
+                    <button class="btn cancel">取消</button>
+                </div>
+            </div>
         </div>
-        <div class="leave-det-item">
+        <div class="leave-det-item js-item">
             <div class="key">
                 <i class="pic"><img src="images/leave-icon4.png" alt=""></i><span class="txt">结束时间</span>
             </div>
             <span class="value">选择结束时间</span>
+            <div class="show-window">
+                <ul class="show-list" >
+                    <li class="active">2014 05 23 08:40</li>
+                    <li >2014 04 21 08:40</li>
+                    <li >2015 05 21 08:40</li>
+                    <li >2016 02 21 08:40</li>
+                    <li >2017 08 21 08:40</li>
+                </ul>
+                <div class="reason-btn">
+                    <button class="btn cancel">取消</button>
+                </div>
+            </div>
         </div>
         <div class="leave-reason">
             <div class="key">
@@ -70,7 +95,7 @@
                 <button class="upload-btn">+</button>
             </div>
        </div>
-        <div class="leave-det-item">
+     <!--   <div class="leave-det-item">
             <div class="key">
                 <i class="pic"><img src="images/leave-icon9.png" alt=""></i><span class="txt"></span>
             </div>
@@ -81,12 +106,12 @@
                 <i class="pic"><img src="images/leave-icon0.png" alt=""></i><span class="txt"></span>
             </div>
             <span class="value">同意 王主任 2015-07-11 10:30</span>
-        </div>
+        </div>-->
     </div>
 </div>
-
+<div class="shadow"></div>
  <div class="leave-btn-list">
-     <button class="yes btn">提交</button>
+     <button class="submit btn">提交</button>
  </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/leave.js"></script>
