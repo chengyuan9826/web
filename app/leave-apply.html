@@ -7,9 +7,10 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
     <link rel="stylesheet" href="css/reset.min.css"/>
     <link rel="stylesheet" href="css/leave.css"/>
+    <link rel="stylesheet" href="css/mobiscroll.custom-2.5.0.min.css">
 </head>
 <body>
-<div class="leave-det">
+<div class="leave-det leave-apply">
     <div class="static">    <header class="notice-header"><a href="" class="go-back"></a><h3>请假申请</h3></header></div>
 
     <div class="leave-det-tit">基本信息</div>
@@ -35,12 +36,12 @@
                 </div>
             </div>
         </div>
-        <div class="leave-det-item js-item">
+        <div class="leave-det-item">
             <div class="key">
                 <i class="pic"><img src="images/leave-icon3.png" alt=""></i><span class="txt">开始时间</span>
             </div>
-            <span class="value">选择起始时间</span>
-            <div class="show-window">
+            <span class="value"><input type="text" readonly class="select-time" id="startTime" placeholder="请选择开始时间"></span>
+         <!--   <div class="show-window">
                 <ul class="show-list" >
                     <li class="active">2014 05 23 08:40</li>
                     <li >2014 04 21 08:40</li>
@@ -51,14 +52,14 @@
                 <div class="reason-btn">
                     <button class="btn cancel">取消</button>
                 </div>
-            </div>
+            </div>-->
         </div>
-        <div class="leave-det-item js-item">
+        <div class="leave-det-item">
             <div class="key">
                 <i class="pic"><img src="images/leave-icon4.png" alt=""></i><span class="txt">结束时间</span>
             </div>
-            <span class="value">选择结束时间</span>
-            <div class="show-window">
+            <span class="value"><input type="text" id="endTime" placeholder="请选择结束时间" readonly class="select-time"></span>
+           <!-- <div class="show-window">
                 <ul class="show-list" >
                     <li class="active">2014 05 23 08:40</li>
                     <li >2014 04 21 08:40</li>
@@ -69,7 +70,7 @@
                 <div class="reason-btn">
                     <button class="btn cancel">取消</button>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="leave-reason">
             <div class="key">
@@ -91,7 +92,7 @@
                 <span class="txt">请假证明</span>
             </div>
             <div class="upload-reason clearfix">
-                <ul class="reason-list"><li><a href=""><img src="images/upload-img.png" alt=""></a></li></ul>
+                <ul class="reason-list"><li><a href="images/scanPic.png"><img src="images/upload-img.png" alt=""></a></li></ul>
                 <button class="upload-btn">+</button>
             </div>
        </div>
@@ -115,5 +116,8 @@
  </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/leave.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.3.0.min.js"></script>
+<script src="js/mobiscroll.js"></script>
 </body>
 </html>

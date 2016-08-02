@@ -59,7 +59,9 @@ html,body{height:100%;}
 .leave-list .look{color:#00cc99;}
 .leave-list{overflow: hidden;}
 /*请假详情*/
-.leave-det{padding-top:4rem;max-width: 750px;margin: 0 auto;background: #eee;padding-bottom: 4rem;}
+.leave-det{padding-top:4rem;max-width: 750px;margin: 0 auto;background: #eee;}
+.leave-deal{}
+.leave-apply{padding-bottom: 4rem;}
 .leave-det-tit{padding-left:0.8rem;font-size:1.5rem;color:#4a4a4a;background:#fff;height:4rem;line-height:4rem;}
 .leave-det-content{margin-top:1rem;background: #fff;}
 .leave-det-item{display:flex;justify-content:space-between;align-content:center;align-items:center;padding:0 1.2rem 0 1.2rem;height:4rem;color:#333;border-top:1px solid #dbdbdb;}
@@ -69,8 +71,9 @@ html,body{height:100%;}
 .leave-det-item .pic img{width:100%;}
 .leave-det-item .value{font-size:1.1rem;color:#999;line-height:4rem;}
 .leave-det-item .value .num{width:4rem;height:3rem;border: 1px solid #eee;text-align: center;}
+.select-time{border: none;height:38px;font-size: 1.1rem;text-align: right;  color: #999; font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif}
 .leave-det-content .leave-det-reason{height:auto;}
-.reason-list li{float: left;width:3rem;}
+.reason-list li{float: left;width:3rem;height:3rem;overflow: hidden}
 .reason-list li img{width:100%;}
 .leave-btn-list{position: fixed;display:flex;justify-content:center;bottom:0;left:0;width:100%;}
 .leave-btn-list .btn{width:50%;height:3.6rem;border:1px solid #fff;background: #00cc99;color:#fff;font-size: 1.5rem;}

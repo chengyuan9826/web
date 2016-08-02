@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>学易同步君列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+<div class="paper">
+    <div id="header">
+        <div class="top_a">
+            <div class="top_w clearfix">
+                <div class="left">
+                    <a title="学科网 - 权威专业的教育资源门户" href="http://www.zxxk.com"></a>
+                </div>
+                <div class="right">
+                    <ul id="userUl">
+                        <li id="loginBtn"><a href="javascript:logindiv()" rel="nofollow">登录</a></li>
+                        <li id="exitBtn"><a href="http://user.zxxk.com/Register/" target="_blank" rel="nofollow">注册</a>
+                        </li>
+                        <li><a id="qixia_c" href="#" target="_blank" rel="qq_box"">在线交流</a></li>
+                        <li><a href="http://cp.zujuan.com/Help.aspx" target="_blank" rel="nofollow">使用帮助</a></li>
+                        <li><a href="javascript:videodiv()" rel="nofollow">视频帮助</a></li>
+                        <li><a id="qixia_b" href="#" rel="pro">产品服务</a></li>
+                        <li><a id="qixia_a" href="#" class="group" rel="subqi">旗下站点</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper clearfix" id="logo">
+        <a class="logo" href="http://www.zujuan.com" target="_blank" title="组卷网首页">组卷网</a>
+        <div class="exam right" id="shoppingCart">
+            <div class="exams exam1">
+                <p class="cart">试题篮</p>
+            </div>
+            <div class="number" id="quescount2">0</div>
+            <div class="cart-list">
+                <p>共计 <span id="quescount">0</span> 题，平均难度：<span id="cartquesdiff"></span></p>
+                <div id="quescountdetail">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr title="占 41.2%">
+                            <td align="right" title="选择题">选择题：</td>
+                            <td align="left"><span class="bilibox" style="width:60px;"><span class="bilibg"
+                                                                                             style="width:24px;"></span></span>
+                            </td>
+                            <td>7题</td>
+                            <td><a class="emptyquestype" href="javascript:void(0);" title="清空 选择题"></a></td>
+                        </tr>
+                        <tr title="占 35.3%">
+                            <td align="right" title="填空题">填空题：</td>
+                            <td align="left"><span class="bilibox" style="width:60px;"><span class="bilibg"
+                                                                                             style="width:21px;"></span></span>
+                            </td>
+                            <td>6题</td>
+                            <td><a class="emptyquestype" href="javascript:void(0);" title="清空 填空题"></a></td>
+                        </tr>
+                        <tr title="占 23.5%">
+                            <td align="right" title="解答题">解答题：</td>
+                            <td align="left"><span class="bilibox" style="width:60px;"><span class="bilibg"
+                                                                                             style="width:14px;"></span></span>
+                            </td>
+                            <td>4题</td>
+                            <td><a class="emptyquestype" href="javascript:void(0);" title="清空 解答题"></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <input type="button" class="deleteall" value="清空全部" id="emptybasket"/>
+                <input type="button" class="generate" value="进入组卷中心" onclick="javascript:Go('zujuan')"/>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="subnav" id="navBar">
+        <div class="wrapper" id="navWrapper">
+            <div class="menu left">
+                <div class="menu-title">
+                    当前学科： <span class="now-subject"></span>
+                </div>
+                <div class="submenu">
+                    <!--加入iframe目的是为了，在智能选题界面中，在没有iframe的情况下，下拉选择框为穿透到切换学科的显示中来。lpx-->
+                    <iframe style="width: 100%; height: 100%; filter: alpha(opacity=0); -moz-opacity: 0;border: 0px;"></iframe>
+                    <div class="primary">
+                        <ul>
+                            <h2>小学</h2>
+                            <li data="24">语文</li>
+                            <li data="23">数学</li>
+                            <li data="25">英语</li>
+                        </ul>
+                    </div>
+                    <div class="junior">
+                        <ul>
+                            <h2>初中</h2>
+                            <li data="1">语文</li>
+                            <li data="2">数学</li>
+                            <li data="3">英语</li>
+                            <li data="4">物理</li>
+                            <li data="5">化学</li>
+                            <li data="6">生物</li>
+                            <li data="7">政治</li>
+                            <li data="8">历史</li>
+                            <li data="9">地理</li>
+                            <li data="26">科学</li>
+                            <li data="29" style="width: 65px;">信息技术</li>
+                        </ul>
+                    </div>
+                    <div class="senior">
+                        <ul>
+                            <h2> 高中</h2>
+                            <li data="10">语文</li>
+                            <li data="11">数学</li>
+                            <li data="12">英语</li>
+                            <li data="13">物理</li>
+                            <li data="14">化学</li>
+                            <li data="15">生物</li>
+                            <li data="16">政治</li>
+                            <li data="17">历史</li>
+                            <li data="18">地理</li>
+                            <li data="27" style="width: 65px;">信息技术</li>
+                            <li data="28" style="width: 65px;">通用技术</li>
+                        </ul>
+                    </div>
+                    <div class="scroll" style="text-align: center">试题总计<span class="t_num"><input type="hidden"
+                                                                                                  id="zujuanquescount"/></span>道<br/>
+                        用户组卷<span class="t_num1"><input type="hidden" id="zujuancount"/></span>套
+                    </div>
+                </div>
+            </div>
+            <div class="paper-nav">
+                <ul class="paper-nav-list">
+                    <li><a href="http://www.zujuan.com">首页</a></li>
+                    <li id="li_2"><a href="javascript:zsdClick();" url="/zhishidian">手动选题</a>
+                        <div id="li_2_tab" class="nav_s">
+                            <ul>
+                                <li><a href="/zhishidian">按知识点</a></li>
+                                <li><a href="/zhangjie">按章节</a></li>
+                                <li><a href="/shijuan">按试卷</a></li>
+                                <li><a href="/zijiantiku">从"自建题库"选题</a></li>
+                                <li><a href="/shoucang">从"我的收藏"选题</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="javascript:znxtClick()" rel="nofollow">智能选题</a></li>
+                    <li><a id="searchQues" href="/sousuo">搜索选题</a></li>
+                    <li>
+                        <a style="margin-left:18px;" id="hundredNav" href="javascript:">百强校专区<img
+                                style="margin-bottom: 15px;" src="images/nav_new.png" alt=""/></a></li>
+                    <li id="li_5"><a href="/zhuanti">分类汇总</a>
+                    </li>
+                    <li id="li_4"><a id="myPaper" href="/xinxi" rel="nofollow">我的组卷</a>
+                        <div id="li_4_tab" class="nav_s">
+                            <ul id="userFunc">
+                                <li><a href="/xinxi" rel="nofollow">用户信息</a></li>
+                                <li><a href="/cundang" rel="nofollow">试卷存档</a></li>
+                                <li><a href="/jilu" rel="nofollow">下载记录</a></li>
+                                <li><a href="/shoucang" rel="nofollow">我的收藏</a></li>
+                                <li><a id="addcomment" href="../yijian" rel="nofollow">发表意见</a></li>
+                                <li><a href="/zijiantikuupload" rel="nofollow">自建题库上传</a></li>
+                                <li><a href="/zijiantikuinfo" rel="nofollow">自建题库统计</a></li>
+                                <li id="addpaper"><a href="/shangchuan" rel="nofollow">合作校上传</a></li>
+                                <li><a id="bbs" href="javascript:void(0);">组卷论坛</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div style="float: right;" id="shoppingCartHolder">
+            </div>
+
+        </div>
+    </div>
+    <div class="base_title" id="navigateTitle">
+        <span class="c333">当前位置：</span>
+        <a href="http://www.zujuan.com">首页</a>&gt; <a href="/zhishidian" class="current">同步试卷</a>
+    </div>
+    <div class="test-main">
+        <div class="left-div">
+            <div class="category-type"><span class="edu-type">人教版</span> <span class="edu-grade">必修一</span>【切换】</div>
+            <div class="category">
+                <div class="category-top clearfix" >
+                    <span class="category-cur-name">高中数学人教新课标</span><a class="refresh" title="刷新当前分类树"></a>
+                </div>
+                <div class="category-list">
+                        <ul class="tree-parent">
+                            <li class="active">
+                                <div class="tree-name">
+                                    <i class="tree-icon"></i>
+                                    <a href="" class="tree-txt" title="集合与常用逻辑用语">集合与常用逻辑用语集合与常用逻辑用语集合与常用逻辑用语</a>
+                                </div>
+                                <ul class="tree-list">
+                                    <li class="tree-second">
+                                        <div class="tree-name">
+                                            <i class="tree-icon"></i>
+                                            <a href="" class="tree-txt" title="集合与常用逻辑用语">集合与常用逻辑用语集合与常用逻辑用语集合与常用逻辑用语</a>
+                                        </div>
+                                        <ul class="second-list">
+                                            <li><a href="" >课时5] 平面向量的实际</a></li>
+                                            <li><a href="">课时5] 平面向量的实际</a></li>
+                                            <li><a href="">课时5] 平面向量的实际</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <div class="tree-name">
+                                    <i class="tree-icon"></i>
+                                    <a href="" class="tree-txt" title="集合与常用逻辑用语">集合与常用逻辑用语</a>
+                                </div>
+                                <ul class="tree-list">
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                </ul>
+                            </li>
+                            <li >
+                                <div class="tree-name">
+                                    <i class="tree-icon"></i>
+                                    <a href="" class="tree-txt" title="集合与常用逻辑用语">集合与常用逻辑用语</a>
+                                </div>
+                                <ul class="tree-list">
+                                    <li><a href="" class="hide">课时5] 平面向量的实际</a></li>
+                                    <li><a href="" class="hide">课时5] 平面向量的实际</a></li>
+                                    <li><a href="" class="hide">课时5] 平面向量的实际</a></li>
+                                </ul>
+                            </li>
+                            <li >
+                                <div class="tree-name">
+                                    <i class="tree-icon"></i>
+                                    <a href="" class="tree-txt" title="集合与常用逻辑用语">集合与常用逻辑用语</a>
+                                </div>
+                                <ul class="tree-list">
+                                    <li><a href="" class="hide">课时5] 平面向量的实际</a></li>
+                                    <li><a href="" class="hide">课时5] 平面向量的实际</a></li>
+                                    <li><a href="" class="hide">课时5] 平面向量的实际</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <div class="tree-name">
+                                    <i class="tree-icon"></i>
+                                    <a href="" class="tree-txt" title="集合与常用逻辑用语">集合与常用逻辑用语</a>
+                                </div>
+                                <ul class="tree-list">
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <div class="tree-name">
+                                    <i class="tree-icon"></i>
+                                    <a href="" class="tree-txt" title="集合与常用逻辑用语">集合与常用逻辑用语</a>
+                                </div>
+                                <ul class="tree-list">
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <div class="tree-name">
+                                    <i class="tree-icon"></i>
+                                    <a href="" class="tree-txt" title="集合与常用逻辑用语">集合与常用逻辑用语</a>
+                                </div>
+                                <ul class="tree-list">
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                    <li><a href="">课时5] 平面向量的实际</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="test-con">
+            <h3 class="test-name">课时3 函数的表达方式</h3>
+            <div class="test-detail clearfix">
+                <span class="det-num">共10题（选择题：6道，填空题：4道）</span>
+                <label class="det-btn" for="show">显示答案与解析</label><input type="checkbox" id="show">
+            </div>
+            <div class="test-mod">
+                <h5 class="test-mod-tit">一、选择题</h5>
+                <ul class="test-list">
+                    <li class="test-item">
+                        <div class="show-btn"><a href="" class="more">查看</a> <a href="" class="insert">加入试题篮</a></div>
+                        <span class="test-name">1、下列各句中，没有语病的一句是</span>
+                        <ul class="test-answer">
+                            <li>A . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>B . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                            <li>C . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>D . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                        </ul>
+                        <div class="answer-ana">
+                            <span class="answer"><i>答案：</i>A</span>
+                            <div class="analysis"><i>解析：</i>海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的
+                                的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉
+                                的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几
+                                数量众多的文物可能需要几代人去整理研究。</div>
+                        </div>
+                    </li>
+                    <li class="test-item">
+                        <div class="show-btn"><a href="" class="more">查看</a> <a href="" class="insert">加入试题篮</a></div>
+                        <span class="test-name">1、下列各句中，没有语病的一句是</span>
+                        <ul class="test-answer">
+                            <li>A . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>B . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                            <li>C . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>D . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                        </ul>
+                        <div class="answer-ana">
+                            <span class="answer"><i>答案：</i>A</span>
+                            <div class="analysis"><i>解析：</i>海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的
+                                的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉
+                                的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几
+                                数量众多的文物可能需要几代人去整理研究。</div>
+                        </div>
+                    </li>
+                    <li class="test-item">
+                        <div class="show-btn"><a href="" class="more">查看</a> <a href="" class="insert">加入试题篮</a></div>
+                        <span class="test-name">1、下列各句中，没有语病的一句是</span>
+                        <ul class="test-answer">
+                            <li>A . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>B . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                            <li>C . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>D . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                        </ul>
+                        <div class="answer-ana">
+                            <span class="answer"><i>答案：</i>A</span>
+                            <div class="analysis"><i>解析：</i>海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的
+                                的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉
+                                的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几
+                                数量众多的文物可能需要几代人去整理研究。</div>
+                        </div>
+                    </li>
+                    <li class="test-item">
+                        <div class="show-btn"><a href="" class="more">查看</a> <a href="" class="insert">加入试题篮</a></div>
+                        <span class="test-name">1、下列各句中，没有语病的一句是</span>
+                        <ul class="test-answer">
+                            <li>A . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>B . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                            <li>C . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>D . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                        </ul>
+                        <div class="answer-ana">
+                            <span class="answer"><i>答案：</i>A</span>
+                            <div class="analysis"><i>解析：</i>海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的
+                                的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉
+                                的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几
+                                数量众多的文物可能需要几代人去整理研究。</div>
+                        </div>
+                    </li>
+                    <li class="test-item">
+                        <div class="show-btn"><a href="" class="more">查看</a> <a href="" class="insert">加入试题篮</a></div>
+                        <span class="test-name">1、下列各句中，没有语病的一句是</span>
+                        <ul class="test-answer">
+                            <li>A . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>B . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                            <li>C . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>D . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                        </ul>
+                        <div class="answer-ana">
+                            <span class="answer"><i>答案：</i>A</span>
+                            <div class="analysis"><i>解析：</i>海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的
+                                的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉
+                                的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几
+                                数量众多的文物可能需要几代人去整理研究。</div>
+                        </div>
+                    </li>
+                    <li class="test-item">
+                        <div class="show-btn"><a href="" class="more">查看</a> <a href="" class="insert">加入试题篮</a></div>
+                        <span class="test-name">1、下列各句中，没有语病的一句是</span>
+                        <ul class="test-answer">
+                            <li>A . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>B . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                            <li>C . 海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。</li>
+                            <li>D . 机器人“阿尔法狗”在围棋比赛中打败韩国选手，这让很多担心今后人工智能的发展是否会威胁到整个人类的生存</li>
+                        </ul>
+                        <div class="answer-ana">
+                            <span class="answer"><i>答案：</i>A</span>
+                            <div class="analysis"><i>解析：</i>海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的
+                                的保留最好的西汉墓园，墓中数量众多的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉
+                                的文物可能需要几代人去整理研究。海运后母的发掘是中国迄今发现的保留最好的西汉墓园，墓中数量众多的文物可能需要几
+                                数量众多的文物可能需要几代人去整理研究。</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="statistics">
+                <span class="skim">下载量：123</span><span class="down">下载量：123</span><span class="like">点赞：123</span>
+            </div>
+       </div>
+            <div class="main-bottom">
+                <div class="add"><img src="images/add.png" alt=""><div class="txt">欢迎加入同步试卷QQ群：<span >语文 89993345</span></div></div>
+                <div class="other clearfix">
+                    <div class="b-left">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <ul class="discuss">
+                            <li class="clearfix">
+                                <a href="" class="pic"><img src="images/hd.png" alt=""></a>
+                                <div class="dis-con">
+                                    <a href="" class="name">id233455 <i class="time">2015-07-09</i></a>
+                                    <p class="dis-txt">参与试点工作的13个中西部试点地区，源采购经费支持。在平台上购买采购试点学
+                                        校、教师和学生购买资源。</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <a href="" class="pic"><img src="images/hd.png" alt=""></a>
+                                <div class="dis-con">
+                                    <a href="" class="name">id233455 <i class="time">2015-07-09</i></a>
+                                    <p class="dis-txt">参与试点工作的13个中西部试点地区，源采购经费支持。在平台上购买采购试点学
+                                        校、教师和学生购买资源。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="b-right">
+                        <h5 class="right-name">热门推荐</h5>
+                        <ul class="right-list">
+                            <li><a href="">平面向量的实际背景</a></li>
+                            <li><a href="">平面向量的实际背景</a></li>
+                            <li><a href="">平面向量的实际背景</a></li>
+                            <li><a href="">平面向量的实际背景</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+
+<div class="show-window">
+    <div class="window-box">
+        <div class="select type clearfix">
+            <span class="name">版本：</span>
+            <ul class="list">
+                <li class="active">人教版</li>
+                <li>苏教版</li>
+                <li>粤教版</li>
+                <li>浙教版</li>
+            </ul>
+        </div>
+        <div class="select grade clearfix">
+            <span class="name">册别：</span>
+            <ul class="list">
+                <li >必修一</li>
+                <li>必修二</li>
+                <li>必修三</li>
+                <li>必修四</li>
+                <li>必修二</li>
+                <li>必修三</li>
+                <li>必修四</li>
+                <li>必修二</li>
+                <li>必修三</li>
+                <li>必修四</li>
+                <li>必修二</li>
+                <li>必修三</li>
+                <li>必修四</li>
+            </ul>
+        </div>
+        <div class="btn-list">
+            <button class="cancel btn">取消</button>
+            <button class="sure btn">确定</button>
+        </div>
+    </div>
+</div>
+
+<div class="side-box">
+    <ul class="list">
+        <li class="item edith"><span class="pic"></span><span class="txt">下载<br/>试卷</span></li>
+        <li class="item download"><span class="pic"></span><span class="txt">试卷<br/>编辑</span></li>
+        <li class="item collection"><span class="pic"></span><span class="txt">收藏</span></li>
+    </ul>
+</div>
+<div class="down-window">
+    <div class="down-box">
+        <div class="header clearfix"><span class="tit">下载</span><button class="close"></button></div>
+        <div class="version down-item clearfix">
+            <div class="name">word版本：</div>
+            <div class="type">
+                <div class="type-item"><label for="docx" class="active">word2007/2010,文件扩展名为docx</label><input type="radio" name="type" id="docx"></div>
+                <div class="type-item"><label for="doc">word2000/2003,文件扩展名为dox</label><input type="radio" name="type" id="doc"></div>
+            </div>
+        </div>
+        <div class="paper down-item clearfix">
+            <div class="name">纸张大小：</div>
+            <div class="type clearfix">
+                <div class="type-item"><span class="pic"><img src="images/paper-type-1.png" alt=""></span><label for="a4">A4</label><input type="radio" name="size" id="a4"></div>
+                <div class="type-1 type-item"><span class="pic"><img src="images/paper-type-2.png" alt=""></span><label for="a4-h">A4横(双栏)</label><input type="radio" name="size" id="a4-h"></div>
+                <div class="type-1 type-item"><span class="pic"><img src="images/paper-type-2.png" alt=""></span><label for="b4">B4横(双栏)</label><input type="radio" name="size" id="b4"></div>
+                <div class=" type-item"><span class="pic"><img src="images/paper-type-1.png" alt=""></span><label for="k16">16K</label><input type="radio" name="size" id="k16"></div>
+                <div class="type-1 type-item"><span class="pic"><img src="images/paper-type-2.png" alt=""></span><label for="k16">A3横(双栏)</label><input type="radio" name="size" id="k16"></div>
+                <div class="type-1 type-item"><span class="pic"><img src="images/paper-type-2.png" alt=""></span><label for="k16">8K横(双栏)</label><input type="radio" name="size" id="k16"></div>
+            </div>
+        </div>
+
+        <div class="paper-type down-item clearfix">
+            <div class="name">试卷类型：</div>
+            <div class="type">
+                <div class="type-item"><label for="paper-1">教师用卷1（答案解析集中在卷尾）</label><input type="radio" name="paper-type" id="paper-1"></div>
+                 <div class="type-item"><label for="paper-2">教师用卷2（答案解析集中在题后）</label><input type="radio" name="paper-type" id="paper-2"></div>
+                 <div class="type-item"><label for="paper-3">学生用卷（无答案解析）</label><input type="radio" name="paper-type" id="paper-3"></div>
+            </div>
+        </div>
+        <div class="btn-list">
+            <button class="cancel btn">取消</button>
+            <button class="sure btn">下载</button>
+        </div>
+    </div>
+</div>
+<div class="hide-box">
+    <div class="hide-tip">
+        预计八月份上线，敬请期待！
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/Digital-scroll.js"></script>
+</body>
+</html>

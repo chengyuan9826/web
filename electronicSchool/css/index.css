@@ -92,12 +92,13 @@ header {position:relative;text-align: center;background: #fff;  }
 
 
 /*详情页*/
-.page-content{display:none;height:100%;position: fixed;top:0;left:0;width:100%;z-index: 999;background: #fff;}
+.page-content{height:100%;position: fixed;top:0;left:0;width:100%;z-index: 999;background: #fff;}
 .page-con-head{display:flex;padding: 1.27rem 1.36rem;flex-wrap: nowrap;justify-content: space-between;align-content: flex-end;border-bottom: 1px solid #ccc;}
 .page-con-head .close{flex-grow:1;background:none;border:none;color:#609135;font-size: 1.27rem;}
 .page-con-head .name{flex-grow:8;font-size: 1.54rem;color:#333;text-align: center;}
-.page-con-head .item-icon{flex-grow:0;font-size: 1.54rem;color:#333;text-align: center;}
+.page-con-head .item-icon{flex-grow:0;font-size: 2rem;color:#333;text-align: center;}
 .page-con-body img{width:100%;}
+.page-con-body{padding: 0 10px;}
 
 /*发送到邮箱*/
 .send{max-width: 750px;margin: 0 auto;}
