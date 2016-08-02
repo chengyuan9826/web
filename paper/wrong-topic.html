@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>答案解析</title>
+    <title>错题本</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
     <link rel="stylesheet" href="css/reset.min.css">
@@ -12,7 +12,42 @@
 <div class="paper-work">
     <header class="header">
         <span class="bk-icon"></span>
-        <span>每周练习</span>
+        <span>错题本</span>
+        <div class="hd-button">
+            <span class="name">筛选</span>
+            <div class="down-box">
+                <div class="down-item">
+                    <h5 class="down-type">年级：</h5>
+                    <ul class="down-list">
+                        <li>全部</li>
+                        <li>初一</li>
+                        <li>初二</li>
+                        <li>初三</li>
+                        <li>必修一</li>
+                        <li>必修二</li>
+                        <li>必修三</li>
+                    </ul>
+                </div>
+                <div class="down-item">
+                    <h5 class="down-type">学科：</h5>
+                    <ul class="down-list">
+                        <li>全部</li>
+                        <li>数学</li>
+                        <li>语文</li>
+                        <li>英语</li>
+                        <li>物理</li>
+                        <li>化学</li>
+                        <li>地理</li>
+                        <li>历史</li>
+                        <li>政治</li>
+                    </ul>
+                </div>
+                <div class="down-btn">
+                    <button class="cancel btn">取消</button>
+                    <button class="sure btn">确认</button>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="paper-tit">
         <h3 class="tit">试题来源：北京市第100中学XXXXXX</h3>
@@ -40,12 +75,14 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
             </p>
         </div>
-        <div class="insert-wrong">
-            <a href="wrong-topic.html">添加错题本</a>
+        <div class="insert-wrong del-wrong">
+            <a href="">移出错题本</a>
         </div>
     </div>
 
 </div>
-
+<div class="shadow"></div>
+<script src="js/zepto.min.js"></script>
+<script src="js/wrong-topic.js"></script>
 </body>
 </html>

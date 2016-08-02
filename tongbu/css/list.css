@@ -121,6 +121,8 @@ html,body{ width:100%;}
 .tree-parent .tree-list li a.hide,.tree-parent .second-list li a.hide{color:#818181;}
 .tree-parent .tree-list li a.hide:hover,.tree-parent .second-list li a.hide:hover{color:#818181;}
 .tree-parent .tree-list li a:hover,.tree-parent .second-list li a:hover{color:#00a2e6;}
+.tree-list li a.active{color:#00a2e6}
+.second-list li a.active{color:#00a2e6}
 .tree-parent li:last-child{background: none;}
 .right-box{float:right;width:880px;
     -webkit-box-sizing: border-box;

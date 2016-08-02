@@ -141,8 +141,8 @@ Value.prototype.getValue=function(list,txtBox){
     var _this=this;
     list.find('li').on('click',function(){
         $(this).addClass('active').siblings().removeClass('active');
-        _this.txt=$(this).text();
-        txtBox.text(_this.txt);
+        //_this.txt=$(this).text();
+      //  txtBox.text(_this.txt);
     });
 };
 Value.prototype.sure=function(btn){
@@ -151,7 +151,6 @@ Value.prototype.sure=function(btn){
         _this.box.hide().children().css('marginTop',0);
         $(window).off('scroll');
     });
-
 };
 Value.prototype.cancel=function(btn){
     var _this=this;
@@ -166,7 +165,6 @@ Value.prototype.close=function(btn){
         _this.box.hide().children().css('marginTop',0);
         $(window).off('scroll');
     });
-
 };
 function selected(btn){
     btn.on('click',function(){
