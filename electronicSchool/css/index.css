@@ -75,7 +75,8 @@ header {position:relative;text-align: center;background: #fff;  }
 .nav-box{position: fixed;top:0;width:100%;padding:0 1.36rem;background: #f3f3f3;border-top: 1px solid #ccc;}
 .nav-box .nav{padding:0.72rem 0;display: flex;align-content: flex-start;}
 .nav>li{width:6.8rem;margin-right: 2rem;}
-.nav .nav-list{height:0;padding:0.4rem 0;position:absolute;display:flex;flex-wrap:wrap;justify-content:center;width:100%;overflow:hidden;left:0;top:100%; box-sizing:border-box;background: #fff;z-index: 99;}
+.scroll-wrap{height:0;overflow: hidden;position: absolute;left: 0;top: 100%;width:100%;background: #fff;z-index: 99;}
+.nav .nav-list{padding:0.4rem 0;display:flex;flex-wrap:wrap;justify-content:center; box-sizing:border-box;}
 .nav .nav-list li{margin: 0.4rem}
 .nav .nav-list a{width: auto;padding: 0 1rem;display: inline-block;height:2rem;line-height:2rem;border:1px solid #ccc;font-size:1.36rem;border-radius: 1rem;-webkit-border-radius: 1rem; }
 .nav .nav-list a.active{background: #88c058;border-color: #88c058;color: #fff;}
@@ -92,8 +93,8 @@ header {position:relative;text-align: center;background: #fff;  }
 
 
 /*详情页*/
-.page-content{height:100%;position: fixed;top:0;left:0;width:100%;z-index: 999;background: #fff;}
-.page-con-head{display:flex;padding: 1.27rem 1.36rem;flex-wrap: nowrap;justify-content: space-between;align-content: flex-end;border-bottom: 1px solid #ccc;}
+.page-content{padding-top: 4rem;}
+.page-con-head{position: fixed;top:0;left:0;width:100%;z-index: 999;background: #fff;display:flex;padding: 1.27rem 1.36rem;flex-wrap: nowrap;justify-content: space-between;align-content: flex-end;border-bottom: 1px solid #ccc;}
 .page-con-head .close{flex-grow:1;background:none;border:none;color:#609135;font-size: 1.27rem;}
 .page-con-head .name{flex-grow:8;font-size: 1.54rem;color:#333;text-align: center;}
 .page-con-head .item-icon{flex-grow:0;font-size: 2rem;color:#333;text-align: center;}
@@ -114,3 +115,11 @@ header {position:relative;text-align: center;background: #fff;  }
 @media(max-width: 440px){.rember-email label.active, .rember-email label{background-size:14px 14px;} }
 .send-btn{ margin-top:5.4rem;text-align: center; }
 .send-btn .btn{width:72%; margin-top:5.4rem;text-align: center; background:#89c158;border:none;height:4rem;line-height: 4rem;border-radius:2rem;font-size: 1.45rem;color:#fff;}
+.send-btn .btn:hover,.send-btn .btn:active{background: #7bad4f;}
+
+.show-window{display:none;position: fixed;top:0;left:0;width:100%;height:100%;background: rgba(0,0,0,0.3);}
+.show-window .show-box{margin:0 auto 0;width:72%;position: relative;}
+.show-window .show-box .tip{height:7rem;line-height:7rem;color:#595757;background: #fff;font-size: 1.4rem;text-align: center;  -webkit-border-radius:7px;  -moz-border-radius:7px;  border-radius:7px;  }
+.show-window .show-box .bg{position:absolute;left:0;right:0;top:-6rem;margin:0 auto;width:8.5rem;height:8.5rem;background: url(../images/success-bg.png) no-repeat;background-size:cover; }
+.show-window.fail .show-box .bg{background: url(../images/fail-bg.png) no-repeat;background-size:cover;}
+.send-btn{ margin-top:3rem; }

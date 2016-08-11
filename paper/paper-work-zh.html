@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <title>做题页面</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui"
+          name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="x5-orientation" content="portrait">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="css/paper.css">
 </head>
 <body>
-<div class="paper-work">
+<div class="paper-work ">
     <header class="header">
-        <span class="bk-icon"></span>
+        <a class="bk-icon" href="paper-list.html"></a>
         <span>每周练习</span>
         <span class="side-icon"></span>
         <ul class="side-nav">
@@ -24,28 +40,42 @@
         <h3 class="tit">试题来源：北京市第100中学XXXXXX</h3>
         <span class="num"><i class="current">5</i>/ <i class="sum">6</i></span>
     </div>
-    <div class="question-box">
-        <h5 class="question-title">
-            2、Mrs. Liang asked me if _______. I said I was too busy to do that
-        </h5>
-        <div class="question-analytic">
-            <div class="look-analytic"><button class="btn">查看解析</button></div>
-            <div class="analytic">
-                <span class="tit">解析：</span>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
-                </p>
-                <div class="answer-btn">
-                    <button class="btn right"><i>A</i>我答对了</button>
-                    <button class="btn wrong"><i>B</i>我打错了</button>
+    <div class="slide-wrap">
+        <ul class="slide">
+            <li class="slide-item paper-work-zh">
+                <div class="question-box">
+                    <h5 class="question-title">
+                        1、Mrs. Liang asked me if _______. I said I was too busy to do that
+                    </h5>
+                    <ul class="answer-list">
+                        <li class="btn right"><label for=""><i class="icon">A</i><span class="txt">我答对了</span></label><input type="radio"></li>
+                        <li class="btn wrong"><label for=""><i class="icon">B</i><span class="txt">我打错了</span></label><input type="radio"></li>
+                    </ul>
+                    <div class="question-analytic">
+                        <div class="look-analytic">
+                            <button class="btn">查看解析</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="analytic">
+                    <span class="tit">解析：</span>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                        laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin
+                        sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus
+                        mollis orci, sed rhoncus sapien nunc eget odio.
+                    </p>
+
+                </div>
+            </li>
+        </ul>
     </div>
 
 
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/work.js"></script>
+<script src="js/layer.js"></script>
 </body>
 </html>

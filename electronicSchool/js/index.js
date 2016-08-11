@@ -10,6 +10,9 @@ $(function () {
     showSelect($('.school-name-list'));
     showBtn();
     cancel();
+    showTip($('.send-btn .btn'));
+    scroll_1=new IScroll($('.scroll-wrap')[0]);
+    scroll_2=new IScroll($('.scroll-wrap')[1]);
   /*  showDetail();//显示在线预览页面*/
     remberEmai();//记住邮箱
 });
@@ -18,16 +21,17 @@ $(function () {
 function downList(btn, shadow) {
     btn.on('click', function () {
         if ($(this).hasClass('active')) {
-            $(this).next('ul').animate({height: '0', overflow: 'hidden'});
+            $(this).next('scroll-wrap').animate({height: '0'});
             $(this).removeClass('active');
             $('.shadow').hide();
         }
         else {
-            btn.removeClass('active').next('ul').animate({'height': '0', overflowY: 'hidden'});
-            $(this).addClass('active').next('ul').animate({'height': '12rem', overflowY: 'scroll'});
+            btn.removeClass('active').next('.scroll-wrap').animate({'height': '0'});
+            $(this).addClass('active').next('.scroll-wrap').animate({'height': '12rem'});
             $('.shadow').show();
         }
-
+        scroll_1.refresh();
+        scroll_2.refresh();
     });
     $('.shadow').on('tap', function () {
         btn.next('ul').animate({height: '0', overflow: 'hidden'});
@@ -85,4 +89,28 @@ function remberEmai() {
             $(this).addClass('active');
         }
     });
+}
+
+/*显示发送邮箱提示*/
+function showTip(btn){
+    btn.on('click',function(){
+        var box=$('.show-window');
+        box.show();
+        var boxHeight=box.children().height();
+        var winHeight=$(window).height();
+        box.children().animate({'marginTop':(winHeight-boxHeight)/2+'px'});
+        var sTop = $('body').scrollTop();
+        $(window).on('scroll', function () {
+            $(this).scrollTop(sTop);
+        });
+        box.on('click',function(){
+            $(this).hide();
+            box.children().animate({'marginTop':0},500);
+        });
+        /*    setTimeout(function(){
+         $('.show-window').hide();
+         box.children().animate({'marginTop':0});
+         },2000);*/
+        return false;
+    })
 }

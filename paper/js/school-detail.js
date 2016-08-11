@@ -1,8 +1,34 @@
 $(function(){
-    downList($('.side-icon'), $('.shadow'));
+    //downList($('.side-icon'), $('.shadow'));
+    showHd();
     downList($('.slt-tit'), $('.overlay'));
     showSelect($('.slt-area-list'), $('.overlay'));
 });
+/*页面头部点击更多按钮*/
+function showHd(){
+    var on=true;
+    $('.side-icon').on('click',function(){
+        if(on){
+            $(this).next('.side-nav').animate({height:'8rem'});
+            on=false;
+        }else{
+            $(this).next('.side-nav').animate({height:0});
+            on=true;
+        }
+    });
+
+    /*收藏试卷*/
+    $('.side-nav .col-icon').on('click',function(){
+        $(this).addClass('clicked').parents('.side-nav').animate({height:0});
+
+        on=true;
+    });
+    /*查看学校简介*/
+    $('.side-nav .ck-icon').on('click',function(){
+        $(this).parents('.side-nav').animate({height:0});
+        on=true;
+    });
+}
 /*下拉菜单*/
 function downList(btn, shadow) {
     btn.on('click', function () {
@@ -27,7 +53,7 @@ function downList(btn, shadow) {
 function showSelect(list,shadow) {
     list.find('li').on('click', function () {
         var txt = $(this).text();
-        list.find('a').removeClass('active');
+        $(this).siblings('li').removeClass('active');
         $(this).addClass('active').parents('ul').prev().removeClass('active').text(txt);
         list.animate({height: '0', overflow: 'hidden'});
        shadow.hide();

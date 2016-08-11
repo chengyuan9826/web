@@ -1,8 +1,8 @@
 $(function(){
     downList($('.slt-tit'), $('.shadow'));
-    treeList($('.slt-list li'));
+  treeList($('.slt-list li'));
     showSelect($('.slt-area-1 .slt-list'));
-    showSelect($('.slt-second-list'));
+   showSelect($('.slt-second-list'));
 });
 /*下拉菜单*/
 function downList(btn, shadow) {
@@ -35,13 +35,14 @@ function showSelect(list) {
     list.find('li').on('click', function () {
         var txt = $(this).text();
         list.removeClass('active');
-        $(this).addClass('active').parents('ul').prev('.slt-tit').removeClass('active').text(txt);
+        $(this).addClass('active').parents('ul').siblings('.slt-tit').removeClass('active').text(txt);
         list.animate({height: '0', overflow: 'hidden'});
         list.parents('.slt-list').animate({height: '0', overflow: 'hidden'});
         $('.shadow').hide();
         return false;
     });
 }
+
 /**
  * Created by Administrator on 2016/8/1.
  */

@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>在线做题</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/zepto.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/hw_online.js"></script>
+    <script src="js/layer.js"></script>
+    <style>
+        .ui-row-flex {
+            display: -webkit-box;
+            width: 100%;
+            -webkit-box-sizing: border-box
+        }
+
+        .ui-row-flex .ui-col {
+            float: none;
+            -webkit-box-flex: 1;
+            width: 0
+        }
+
+        .question_choose {
+            max-width: 34px;
+            min-width: 34px;
+        }
+
+        .question_list li {
+            height: inherit;
+            min-height: 36px;
+        }
+
+        .question_choose_text {
+            word-break: break-word;
+            text-align: justify;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="container_header">
+        <a class="bk-icon" href="paper-list.html"></a>
+        <output class="msg_title">在线做题</output>
+        <span class="side-icon"></span>
+        <ul class="side-nav">
+            <li class="arrow-icon"></li>
+            <li class="submit-icon">交卷</li>
+            <li class="ck-icon">收藏试卷</li>
+        </ul>
+    </header>
+    <aside class="container_aside">
+        <header class="aside_header">
+            <output class="qusetion_msg margin_l_20">试题来源：北京市第100中学XXXXXX</output>
+            <output class="question_count">
+                <output class="question_num" id="question_num">1</output>
+                /<output class="question_sum">10</output>
+            </output>
+        </header>
+        <aside class="section_list">
+            <section class="aside_section question_1 current" alt="1" data-quesid="111">
+                <div class="question_scroll">
+                    <output class="question_title">
+                        <output class="title_type" data-type="duo">【多选】</output>
+                        甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                    </output>
+                    <div class="question_choose_list">
+                        <ul class="question_list">
+                            <li>
+                                <output class="correct question_choose">A</output>
+                                    <span> Monday1Monday1Monday1Monday1Monday1Monday1Monday1Mo</span>
+                            </li>
+                            <li>
+                                <output class="question_choose">B</output>
+                                <span>我是超长选项我是超长选项我是超长选项我</span>
+                            </li>
+                            <li>
+                                <output class="question_choose">C</output>
+                                <span>Monday1 Monday 1Monday 1Monday 1onday 1Mond1 Monday1</span>
+                            </li>
+                            <li>
+                                <output class="question_choose">D</output>
+                                <span>Tuesday</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resolve">
+                        <div class="right-result">
+                            <span class="resolve-result">正确答案：<i>B</i></span>
+                        </div>
+                        <div class="analytic">
+                            <span class="tit">解析：</span>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin
+                                sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus
+                                mollis orci, sed rhoncus sapien nunc eget odio.
+                            </p>
+                        </div>
+                        <div class="insert-wrong">
+                            <a href="wrong-topic.html">添加错题本</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="aside_section question_2" alt="2" data-quesid="112">
+                <div class="question_title_more">
+                    <div class="more_msg">
+                        <output class="question_title">
+                            There are ___ days ___ a week. They are ___ , Tuesday, WednesdThere are ___ days ___ a week.There are ___ days ___ a week. They are ___ , Tuesday, WednesdThere are ___ days ___ a week.There are ___ days ___ a week. They are ___ , Tuesday, WednesdThere are ___ days ___ a week.There are ___ days ___ a week. They are ___ , Tuesday,There are ___ days ___ a week. They are ___ , Tuesday,There are ___ days ___ a week. They are ___ , Tuesday,
+                        </output>
+                    </div>
+                </div>
+                <div class="small-box">
+                    <ul class="small-questions">
+                        <li data-quesid="113" data-parentid="112">
+                            <div class="question_scroll">
+                                <output class="question_title">
+                                    <output class="title_type" data-type="dan">【单选1】</output>
+                                    甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                                </output>
+                                <div class="question_choose_list">
+                                    <ul class="question_list">
+                                        <li>
+                                            <output class="correct question_choose">A</output>
+                                                <span> Monday1Monday1Monday1Monday1Monday1Monday1Monday1Mo</span>
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">B</output>
+                                            <span>我是超长选项我是超长选项我是超长选项</span>
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Monday1
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="resolve">
+                                    <div class="right-result">
+                                        <span class="resolve-result">正确答案：<i>B</i></span>
+                                    </div>
+                                    <div class="analytic">
+                                        <span class="tit">解析：</span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                        </p>
+                                    </div>
+                                    <div class="insert-wrong">
+                                        <a href="wrong-topic.html">添加错题本</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 114 -->
+                        <li data-quesid="114" data-parentid="112">
+                            <div class="question_scroll">
+                                <output class="question_title">
+                                    <output class="title_type" data-type="dan">【单选2】</output>
+                                    甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                                </output>
+                                <div class="question_choose_list">
+                                    <ul class="question_list">
+                                        <li class="ui-row-flex">
+                                            <output class="ui-col correct question_choose">A</output>
+                                                <span class="ui-col question_choose_text"> Monday1Monday1Mondanday1Mo</span>
+                                        </li>
+                                        <li class="ui-row-flex">
+                                            <output class="ui-col  question_choose">B</output>
+                                            <span class="ui-col  question_choose_text">我是超长选项我是超长选项我是超长选项我是超长选项我是超长选项我是超长选项我是超长选项</span>
+                                        </li>
+                                        <li class="ui-row-flex">
+                                            <output class="ui-col  question_choose">C</output>
+                                            <span class="ui-col  question_choose_text">Monday1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="resolve">
+                                    <div class="right-result">
+                                        <span class="resolve-result">正确答案：<i>B</i></span>
+                                    </div>
+                                    <div class="analytic">
+                                        <span class="tit">解析：</span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                        </p>
+                                    </div>
+                                    <div class="insert-wrong">
+                                        <a href="wrong-topic.html">添加错题本</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-quesid="115" data-parentid="112">
+                            <div class="question_scroll">
+                                <output class="question_title">
+                                    <output class="title_type" data-type="duo">【多选2】</output>
+                                    甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                                </output>
+                                <div class="question_choose_list">
+                                    <ul class="question_list">
+                                        <li>
+                                            <output class="correct question_choose">A</output>
+                                            Monday3
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">B</output>
+                                            Friday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Sunday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">D</output>
+                                            Tuesday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Sunday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">D</output>
+                                            Tuesday
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="resolve">
+                                    <div class="right-result">
+                                        <span class="resolve-result">正确答案：<i>B</i></span>
+                                    </div>
+                                    <div class="analytic">
+                                        <span class="tit">解析：</span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                        </p>
+                                    </div>
+                                    <div class="insert-wrong">
+                                        <a href="wrong-topic.html">添加错题本</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-quesid="116" data-parentid="112">
+                            <div class="question_scroll">
+                                <output class="question_title">
+                                    <output class="title_type" data-type="dan">【单选2】</output>
+                                    甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                                </output>
+                                <div class="question_choose_list">
+                                    <ul class="question_list">
+                                        <li>
+                                            <output class="correct question_choose">A</output>
+                                            Monday3
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">B</output>
+                                            Friday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Sunday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">D</output>
+                                            Tuesday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Sunday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">D</output>
+                                            Tuesday
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="resolve">
+                                    <div class="right-result">
+                                        <span class="resolve-result">正确答案：<i>B</i></span>
+                                    </div>
+                                    <div class="analytic">
+                                        <span class="tit">解析：</span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                        </p>
+                                    </div>
+                                    <div class="insert-wrong">
+                                        <a href="wrong-topic.html">添加错题本</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="aside_section question_3" alt="3" data-quesid="117">
+                <div class="question_title_more">
+                    <div class="more_msg">
+                        <output class="question_title">
+                            There are ___ days ___ a week. They are ___ , Tuesday, Wednesd
+                        </output>
+                    </div>
+                    <!--<div class="show_more arrow_blue_b">
+                        <img src="images/drag.png" width="30" height="15">
+                    </div>-->
+                </div>
+                <div class="small-box">
+                    <ul class="small-questions">
+                        <li data-quesid="118" data-parentid="117">
+                            <div class="question_scroll">
+                                <output class="question_title">
+                                    <output class="title_type" data-type="dan">【单选1】</output>
+                                    甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                                </output>
+                                <div class="question_choose_list">
+                                    <ul class="question_list">
+                                        <li>
+                                            <output class="correct question_choose">A</output>
+                                            Monday1
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">B</output>
+                                            Friday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Sunday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">D</output>
+                                            Tuesday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Sunday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">D</output>
+                                            Tuesday
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="resolve">
+                                    <div class="right-result">
+                                        <span class="resolve-result">正确答案：<i>B</i></span>
+                                    </div>
+                                    <div class="analytic">
+                                        <span class="tit">解析：</span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                        </p>
+                                    </div>
+                                    <div class="insert-wrong">
+                                        <a href="wrong-topic.html">添加错题本</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-quesid="119" data-parentid="117">
+                            <div class="question_scroll">
+                                <output class="question_title">
+                                    <output class="title_type" data-type="dan">【单选2】</output>
+                                    甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                                </output>
+                                <div class="question_choose_list">
+                                    <ul class="question_list">
+                                        <li>
+                                            <output class="correct question_choose">A</output>
+                                            Monday2
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">B</output>
+                                            Friday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Sunday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">D</output>
+                                            Tuesday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">C</output>
+                                            Sunday
+                                        </li>
+                                        <li>
+                                            <output class="question_choose">D</output>
+                                            Tuesday
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="resolve">
+                                    <div class="right-result">
+                                        <span class="resolve-result">正确答案：<i>B</i></span>
+                                    </div>
+                                    <div class="analytic">
+                                        <span class="tit">解析：</span>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                        </p>
+                                    </div>
+                                    <div class="insert-wrong">
+                                        <a href="wrong-topic.html">添加错题本</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="aside_section question_4 " alt="4" data-quesid="120">
+                <div class="question_scroll">
+                    <output class="question_title">
+                        <output class="title_type" data-type="dan"></output>
+                        甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。  甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                        甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10  甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                        甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10  甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。
+                        甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10：9，则甲数占甲、乙两数和的( )。甲乙两数的比是10
+                    </output>
+                    <div class="question_choose_list">
+                        <ul class="question_list">
+                            <li>
+                                <output class="correct question_choose">A</output>
+                                <span>会做</span></li>
+                            <li>
+                                <output class="question_choose">B</output>
+                                <span>不会做</span></li>
+                        </ul>
+                    </div>
+                    <div class="question-analytic">
+                        <div class="analysis_btn">
+                            <button class="btn">查看解析</button>
+                        </div>
+                        <div class="analysis_info">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendumLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendumLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </aside>
+</div>
+<div class="dialog">
+    <div class="dialog_bg"></div>
+    <div class="dialog_info">
+        <section class="dialog_body">
+            <output class="dialog_tips">提示</output>
+            <output class="dialog_tips_msg">你还有项目未答，确认提交？</output>
+            <!-- <output class="dialog_tips_msg">一旦提交不可修改，确认提交？</output> -->
+            <!-- <output class="dialog_tips_msg">你还有项目未答，确认提交？</output> -->
+        </section>
+        <footer class="dialog_footer">
+            <output class="dialog_button" id="submit-btn">确认</output>
+            <output class="dialog_button cancle_button">取消</output>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

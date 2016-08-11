@@ -2,25 +2,37 @@
  * Created by Administrator on 2016/7/27.
  */
 $(function () {
+    showDownLoad();
     show();
     downList($('.tree-parent>li>.tree-name'));
     secondList($('.tree-second>.tree-name'));
     showAnswer($('.det-btn'));
     likeNum($('.statistics'));
-    showDownLoad();
+
     selected($('.down-window label '));
     headerList($(".paper-nav-list li"));
     carList($('.exam'));
     pageScroll();
     setListHeight($('.category-list'));
     showTip($('a.hide'));
+    hoverShow();
 });
+
+/*鼠标滑过显示按钮*/
+function hoverShow(){
+$('.test-list .test-item').mouseenter(function(){
+    $(this).find('.show-btn').stop().animate({'opacity':1});
+}).mouseleave(function(){
+    $(this).find('.show-btn').stop().animate({'opacity':0});
+});
+}
+
 /*未上线显示提示*/
 function showTip(btn){
-  btn.on('click',function(){
+  btn.live('click',function(){
       var box=$('.hide-box');
       box.show();
-      box.on('click',function(){
+      box.live('click',function(){
            $(this).hide();
       });
       setTimeout(function(){
@@ -55,13 +67,13 @@ function carList(nav){
 }
 /*点赞*/
 function likeNum(btn){
-    btn.find('.like').on('click',function(){
+    btn.find('.like').live('click',function(){
         $(this).addClass('active');
     })
 }
 /*显示答案与解析*/
 function showAnswer(btn){
-  btn.on('click',function(){
+  btn.live('click',function(){
       var che=$(this).siblings('#show').prop('checked');
       if(che){
           $(this).removeClass('active');
@@ -75,7 +87,7 @@ function showAnswer(btn){
 }
 /*侧边列表显示*/
 function downList(btn){
-    btn.children('.tree-icon').on('click',function(){
+    btn.find('.tree-icon').live('click',function(){
         if($(this).parents('li').hasClass('active')){
             $(this).parents('.tree-name').next('.tree-list').slideUp();
             $(this).parents('li').removeClass('active');
@@ -89,7 +101,7 @@ function downList(btn){
     return false;
 }
 function secondList(btn){
-    btn.children('.tree-icon').on('click',function(){
+    btn.find('.tree-icon').live('click',function(){
         if($(this).parents('li').hasClass('current')){
             $(this).parent('.tree-name').next('.second-list').slideUp();
             $(this).parents('li').removeClass('current');
@@ -113,7 +125,7 @@ function show(){
 }
 /*显示下载选项*/
 function showDownLoad(){
-    var obj= new Value($('.side-box .edith'),$('.down-window'));
+    var obj= new Value($('.edith'),$('.down-window'));
     obj.showBox();
     obj.close($('.down-window .close'));
     obj.sure($('.down-window .sure'));
@@ -126,20 +138,20 @@ function Value(btn,box){
 }
 Value.prototype.showBox=function(){
    var _this=this;
-    this.btn.on('click', function () {
+    this.btn.live('click', function () {
         _this.box.show();
         var boxHeight=_this.box.children().height();
         var winHeight=$(window).height();
         _this.box.children().animate({'marginTop':(winHeight-boxHeight)/2+'px'});
         var sTop = $('body').scrollTop();
-        $(window).on('scroll', function () {
+        $(window).live('scroll', function () {
             $(this).scrollTop(sTop);
         });
     });
 };
 Value.prototype.getValue=function(list,txtBox){
     var _this=this;
-    list.find('li').on('click',function(){
+    list.find('li').live('click',function(){
         $(this).addClass('active').siblings().removeClass('active');
         //_this.txt=$(this).text();
       //  txtBox.text(_this.txt);
@@ -147,32 +159,32 @@ Value.prototype.getValue=function(list,txtBox){
 };
 Value.prototype.sure=function(btn){
     var _this=this;
-    btn.on('click',function(){
+    btn.live('click',function(){
         _this.box.hide().children().css('marginTop',0);
         $(window).off('scroll');
     });
 };
 Value.prototype.cancel=function(btn){
     var _this=this;
-    btn.on('click',function(){
+    btn.live('click',function(){
         _this.box.hide().children().css('marginTop',0);
         $(window).off('scroll');
     });
 };
 Value.prototype.close=function(btn){
     var _this=this;
-    btn.on('click',function(){
+    btn.live('click',function(){
         _this.box.hide().children().css('marginTop',0);
         $(window).off('scroll');
     });
 };
 function selected(btn){
-    btn.on('click',function(){
+    btn.live('click',function(){
         $(this).addClass('active').parent().siblings().find('label').removeClass('active');
     });
 }
 function pageScroll(){
-    $(window).on('scroll',function(){
+    $(window).scroll(function(){
         var sTop=$(window).scrollTop();
         if(sTop>100){
             $('#navBar').addClass('fixed');
