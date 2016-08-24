@@ -34,13 +34,13 @@ html,body{height:100%;}
 /*学校列表*/
 .page{height:100%;}
 .static-box{position: fixed;top:0;width:100%;left:0;right:0;z-index: 999;}
-.shadow{display:none;position: fixed;left:0;background: rgba(0,0,0,0.5); width:100%;height:100%;z-index: 1}
+.shadow{display:none;position: fixed;left:0;overflow:auto;background: rgba(0,0,0,0.5); width:100%;height:100%;z-index: 1}
 header {position:relative;text-align: center;background: #fff;  }
 .school-name {display: inline-block;position: relative;padding-right:1.64rem;font-size: 1.55rem;text-align: center;line-height: 4rem;  height: 4rem; background: url(../images/down-arrow.png) no-repeat center right;}
 .school-name.active{ background: url(../images/up-arrow.png) no-repeat center right;}
 @media(max-width: 440px){.school-name {background-size:12px 8px;}  .school-name.active {background-size:12px 8px;}  }
 .school-name-icon {width: 1rem;height: 0.8rem; position: absolute; top: 50%;right: -1.4rem;margin-top: -0.37rem; background-size: cover; background: url(../images/down-arrow.png) no-repeat center center;  }
-.school-name-list{position: absolute;height:0;overflow:hidden;top:101%;width:100%;z-index: 999999;background: #fff;}
+.school-name-list{position: absolute;display:none;overflow:hidden;top:101%;width:100%;z-index: 999999;background: #fff;}
 .school-name-list li {border-top:1px  solid #ccc;line-height: 4rem;height:4rem;}
 .school-name-list li a{display: block;text-align:center;font-size: 1.45rem;color:#333;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif}
 .school-name-list li a.active{color:#6a9942; background: url(../images/selected.png) no-repeat 80% center;background-size: 21px 15px;    }
@@ -49,12 +49,12 @@ header {position:relative;text-align: center;background: #fff;  }
 .show-selected {display: block; height: 3rem;line-height: 3rem; text-align: center;font-size: 1.27rem;color: #333;background: #fff8d5 url(../images/down-arrow.png) no-repeat 90% 50%; border: 1px solid #ccc;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;  }
 .show-selected.active {background: #fff url(../images/up-arrow.png) no-repeat 90% 50%;color: #88c058;border-bottom: none;  }
 @media(max-width: 440px){.show-selected {background-size:12px 8px;} .show-selected.active {background-size:12px 8px;}  }
-.show-list {height:0;overflow: hidden; /*padding-bottom:2rem;*/position: absolute;width: 100%;top: 100%;left: 0;z-index: 9;background: #fff;  }
+.show-list {display:none;padding-bottom:1rem;overflow-y:auto;position: absolute;width: 100%;top: 100%;left: 0;z-index: 9;background: #fff;  }
 .show-list li{float: left;width:33.333%;margin-top: 1.4rem;text-align: center;}
 .show-list li a{display: inline-block;width:72%;height:2.28rem;line-height:2.28rem;border:1px solid #ccc;font-size:1.36rem;border-radius: 1.14rem; }
 .show-list li a.active{background: #88c058;border-color: #88c058;color:#fff;}
 .page-list{height:100%;padding-top: 7.2rem;box-sizing: border-box}
-.main-list{height:100%;padding: 0 1.36rem; overflow: scroll; }
+.main-list{padding: 0 1.36rem; overflow: scroll; }
 .main-list .list-item{display: -webkit-flex;display: flex; flex-wrap:nowrap;justify-content:space-between;align-items:center;padding: 1.18rem 0;border-bottom:1px solid #ccc;  }
 .list-item-con{flex-grow:10;display: flex;align-items: center;}
 .item-pic{width:20%;}
@@ -71,14 +71,14 @@ header {position:relative;text-align: center;background: #fff;  }
 
 /*首页*/
 *{-webkit-box-sizing: border-box;box-sizing: border-box;}
-.main{max-width:750px;padding-top:3.8rem;box-sizing:border-box;margin: 0 auto;height:100%;overflow: scroll;}
+.main{max-width:750px;padding-top:3.8rem;box-sizing:border-box;margin: 0 auto;overflow: scroll;}
 .nav-box{position: fixed;top:0;width:100%;padding:0 1.36rem;background: #f3f3f3;border-top: 1px solid #ccc;}
 .nav-box .nav{padding:0.72rem 0;display: flex;align-content: flex-start;}
 .nav>li{width:6.8rem;margin-right: 2rem;}
-.scroll-wrap{height:0;overflow: hidden;position: absolute;left: 0;top: 100%;width:100%;background: #fff;z-index: 99;}
-.nav .nav-list{padding:0.4rem 0;display:flex;flex-wrap:wrap;justify-content:center; box-sizing:border-box;}
-.nav .nav-list li{margin: 0.4rem}
-.nav .nav-list a{width: auto;padding: 0 1rem;display: inline-block;height:2rem;line-height:2rem;border:1px solid #ccc;font-size:1.36rem;border-radius: 1rem;-webkit-border-radius: 1rem; }
+.scroll-wrap{}
+.nav .nav-list{padding:0.4rem 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;overflow: auto;display:none;position: absolute;left: 0;top: 100%;width:100%;background: #fff;z-index: 99;}
+.nav .nav-list li{float: left;width: 33.333%;margin-top: 1.4rem;}
+.nav .nav-list a{width:80%;padding: 0 1rem;display: block;margin:0 auto;height:2rem;line-height:2rem;text-align:center;border:1px solid #ccc;font-size:1.1rem;border-radius: 1rem;-webkit-border-radius: 1rem; }
 .nav .nav-list a.active{background: #88c058;border-color: #88c058;color: #fff;}
 .nav .nav-name{display: block;height:2.28rem;padding-left:1.36rem;line-height:2.28rem;border:1px solid #ccc;font-size:1.27rem;color:#333;-webkit-border-radius: 1.14rem;border-radius: 1.14rem;background: url(../images/down-arrow.png) no-repeat 86% center;font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif }
 .nav .nav-name.active{border-color: #88c058;color:#88c058;background: url(../images/up-arrow.png) no-repeat 86% center;}

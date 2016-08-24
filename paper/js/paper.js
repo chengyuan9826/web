@@ -3,6 +3,7 @@
  */
 $(function(){
     scrollLeft($('.coll-con'));
+    scrollLeft($('.txt-list-item'));
 });
 
 /*左滑删除*/

@@ -1,118 +1,139 @@
 /**
  * Created by Administrator on 2016/8/2.
  */
-$(function(){
+$(function () {
     showHd();
     lookAnalytic($('.look-analytic .btn'));
     selectAnswer();
     setRadioId();
     setRadioName($('.answer-list'));
-    slide($('.slide'),$('.paper-tit .num'));
-   /* var myScroll=new IScroll('.slide-item');
-    var mScroll=new IScroll('.scroll-wrap');
-    new IScroll('.scroll-wrap1');*/
-});
+    slide($('.slide'), $('.paper-tit .num'));
+    currentAndSum($('.slide'),1);
 
+    scroll($('.slide-second-wrap'));
+    scroll($('.scroll-1'));
+    scroll($('.scroll'));
+});
+function scroll(obj){
+    $.each(obj,function(index,val){
+        new IScroll(obj[index]);
+    });
+}
 /*做题页面头部点击更多按钮*/
-function showHd(){
-    var on=true;
-    $('.side-icon').on('click',function(){
-        if(on){
+function showHd() {
+    var on = true;
+    $('.side-icon').on('click', function () {
+        if (on) {
             $(this).next('.side-nav').show();
-            on=false;
-        }else{
+            on = false;
+        } else {
             $(this).next('.side-nav').hide();
-            on=true;
+            on = true;
         }
     });
     /*收藏学校*/
-    $('.side-nav .col-icon').on('click',function(){
+    $('.side-nav .col-icon').on('click', function () {
         $(this).parents('.side-nav').hide();
-        on=true;
+        on = true;
     });
     /*收藏试卷*/
-    $('.side-nav .ck-icon').on('click',function(){
+    $('.side-nav .ck-icon').on('click', function () {
         $(this).parents('.side-nav').hide();
-        on=true;
+        on = true;
     });
 }
 
 /*查看解析*/
-function lookAnalytic(btn){
-    btn.on('click',function(){
-        if($(this).hasClass('active')){
+function lookAnalytic(btn) {
+    btn.on('click', function () {
+        if ($(this).hasClass('active')) {
             $(this).removeClass('active');
-            $(this).parents('.question-analytic').find('.analysis_info').hide();
+            $(this).parents('.look-analytic').next('.analysis').hide();
         }
-        else{
+        else {
             $(this).addClass('active');
-            $(this).parents('.question-analytic').find('.analysis_info').show();
+            $(this).parents('.look-analytic').next('.analysis').show();
         }
+        scroll($('.scroll-1'));
     });
 }
 
 /*滑动加载下一题*/
-function slide(ul,numBox){
-    var len=ul.children().length;
-    var current=0;
-    var itemWidth=$(window).width();
-    var ht=$(window).height()-$('.paper-tit').height()-$('header').height();
-    /*设置side-wrap的高度*/
-    ul.width(len*itemWidth);
-    ul.children().width(itemWidth);
+function slide(ul) {
+    $('.slide-wrap').height($(window).height()-$('.header').height()-$('.paper-tit').height());
+    slider(ul);
+    slider($('.second-wrap'));
+}
+/*slider*/
+function slider(ul){
+    ul.each(function(id,val) {
+        var len = $(val).children().length;
+        var wd = $(window).width();
+        var parentLen=$(val).parents('ul').children().length;
+        var parentIndex=$(val).parents('li').index();
+        $(val).width(len * wd);
+        $(val).children().width(wd);
 
-    ul.children().on('swipeLeft',function(){
-            if(current<len-1){
-                ul.animate({left:-(current+1)*itemWidth});
-                current++;
-                numBox.find('.current').text(current+1);
+        $(val).children().on('swipeRight', function (e) {
+            e.preventDefault();
+            var index = $(this).index();
+            if (index > 0) {
+                $(this).parent().animate({left: -(index - 1) * wd});
             }
             else{
-                layer.open({
-                    title: '提示',
-                    content: '练习做完了，查看练习结果？',
-                    btn: ['查看', '取消'],
-                    yes: function(index){
-                        window.location='test-result.html';
-                        layer.close(index);
-                    }
-                });
+                if($(val).parents('li').length>0 && parentIndex>0){
+                    $(val).parents('ul').animate({left: -(parentIndex-1) * wd});
+                }
             }
+            e.stopPropagation();
+        });
+        $(val).children().on('swipeLeft', function (e) {
+            e.preventDefault();
+            var index = $(this).index();
+            if (index <len-1) {
+                $(this).parent().animate({left: -(index+1) * wd});
+            }
+            else{
+                if($(val).parents('li').length>0 && parentIndex<parentLen-1){
+                   $(val).parents('ul').animate({left: -(parentIndex+1) * wd});
+                }
+            }
+            currentAndSum($('.slide'),parentIndex);
+            e.stopPropagation();
+        });
     });
-    ul.children().on('swipeRight',function(){
-        if(current>0){
-            ul.animate({left:-(current-1)*itemWidth});
-            current--;
-            numBox.find('.current').text(current+1);
-        }
-        else{
-            layer.open({
-                title: '提示',
-                content: '这已经是第一题！'
-            });
-        }
-    });
+    function autoSlide(ul,index){
+        ul.each(function(id,val) {
+            e.preventDefault();
+            var len = $(val).children().length;
+            var wd = $(this).width();
+            if (index <len-1) {
+                $(this).parent().animate({left: -(index+1) * wd});
+                index++;
+            }
+            e.stopPropagation();
+        });
+    }
 }
-
 /*显示当前题目个数以及当前题号*/
-function currentAndSum(ul){
-    var sum= ul.children().length;
-    var current=parseInt($('.aside_section.current').index())+1;
+function currentAndSum(ul,index) {
+    var sum = ul.children().length;
+    var current = index;
     $('.num .sum').text(sum);
     $('.num .current').text(current);
 }
 
 /*获取选择的答案*/
-function Answer(list){
-    this.result=[];
-    this.list=list;
+function Answer(list) {
+    this.result = [];
+    this.list = list;
     return this.getValue();
 }
-Answer.prototype.getValue=function(){
-    var _this=this;
-    $.each(_this.list.find('input'),function(index,val){
-        if($(val).prop('checked')){
-            var txt=$(val).siblings('label').find('i').text();
+Answer.prototype.getValue = function () {
+    var _this = this;
+    $.each(_this.list.find('input'), function (index, val) {
+        if ($(val).prop('checked')) {
+            var txt = $(val).siblings('label').find('i').text();
             _this.result.push(txt);
         }
     });
@@ -120,8 +141,8 @@ Answer.prototype.getValue=function(){
 };
 
 /*做题页面选择题*/
-function selectAnswer(){
-    $('.answer-list label').on('click',function(){
+function selectAnswer() {
+    $('.answer-list label').on('click', function () {
         $(this).addClass('active').parents().siblings().find('label').removeClass('active');
     });
 }

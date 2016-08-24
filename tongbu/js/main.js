@@ -74,7 +74,7 @@ function likeNum(btn){
 /*显示答案与解析*/
 function showAnswer(btn){
   btn.live('click',function(){
-      var che=$(this).siblings('#show').prop('checked');
+      var che=$(this).hasClass('active');
       if(che){
           $(this).removeClass('active');
           $('.answer-ana').slideUp();
@@ -142,7 +142,10 @@ Value.prototype.showBox=function(){
         _this.box.show();
         var boxHeight=_this.box.children().height();
         var winHeight=$(window).height();
+        /*var boxWidth=_this.box.children().width();
+        var winWidth=$(window).width();*/
         _this.box.children().animate({'marginTop':(winHeight-boxHeight)/2+'px'});
+        /*_this.box.children().animate({'marginLeft':(winWidth-boxWidth)/2+'px'});*/
         var sTop = $('body').scrollTop();
         $(window).live('scroll', function () {
             $(this).scrollTop(sTop);
@@ -161,21 +164,18 @@ Value.prototype.sure=function(btn){
     var _this=this;
     btn.live('click',function(){
         _this.box.hide().children().css('marginTop',0);
-        $(window).off('scroll');
     });
 };
 Value.prototype.cancel=function(btn){
     var _this=this;
     btn.live('click',function(){
         _this.box.hide().children().css('marginTop',0);
-        $(window).off('scroll');
     });
 };
 Value.prototype.close=function(btn){
     var _this=this;
     btn.live('click',function(){
         _this.box.hide().children().css('marginTop',0);
-        $(window).off('scroll');
     });
 };
 function selected(btn){
@@ -186,7 +186,7 @@ function selected(btn){
 function pageScroll(){
     $(window).scroll(function(){
         var sTop=$(window).scrollTop();
-        if(sTop>100){
+        if(sTop>60){
             $('#navBar').addClass('fixed');
             $('.left-div').addClass('fixed1');
         }

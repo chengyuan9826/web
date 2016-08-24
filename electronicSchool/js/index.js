@@ -11,8 +11,9 @@ $(function () {
     showBtn();
     cancel();
     showTip($('.send-btn .btn'));
-    scroll_1=new IScroll($('.scroll-wrap')[0]);
-    scroll_2=new IScroll($('.scroll-wrap')[1]);
+  //  scrollShow();
+   /* scroll_1=new IScroll($('.scroll-wrap')[0]);
+    scroll_2=new IScroll($('.scroll-wrap')[1]);*/
   /*  showDetail();//显示在线预览页面*/
     remberEmai();//记住邮箱
 });
@@ -20,22 +21,25 @@ $(function () {
 /*点击显示下拉菜单*/
 function downList(btn, shadow) {
     btn.on('click', function () {
+        var ht=$(window).height();
         if ($(this).hasClass('active')) {
-            $(this).next('scroll-wrap').animate({height: '0'});
+            $(this).next('ul').hide();
             $(this).removeClass('active');
+            $('body').css('overflow','auto');
             $('.shadow').hide();
         }
         else {
-            btn.removeClass('active').next('.scroll-wrap').animate({'height': '0'});
-            $(this).addClass('active').next('.scroll-wrap').animate({'height': '12rem'});
+            btn.removeClass('active').next('ul').hide();
+            $(this).addClass('active').next('ul').slideDown()/*animate({'height': '12rem'})*/;
+            $(this).addClass('active').next('ul').css('max-height',ht*0.7+'px');
             $('.shadow').show();
+            $('body').css('overflow','hidden');
         }
-        scroll_1.refresh();
-        scroll_2.refresh();
     });
-    $('.shadow').on('tap', function () {
-        btn.next('ul').animate({height: '0', overflow: 'hidden'});
+    $('.shadow').on('click', function () {
+        btn.next('ul').hide();
         btn.removeClass('active');
+        $('body').css('overflow','auto');
         $(this).hide();
     })
 }
@@ -45,8 +49,9 @@ function showSelect(list) {
         var txt = $(this).text();
         list.find('a').removeClass('active');
         $(this).addClass('active').parents('ul').prev().removeClass('active').text(txt);
-        list.animate({height: '0', overflow: 'hidden'});
+        list.hide();
         $('.shadow').hide();
+        $('body').css('overflow','auto');
         return false;
     });
 }
@@ -64,7 +69,6 @@ function cancel() {
         $('.btn-list').animate({'bottom': '-30%'}, function () {
             $('.wrap-shadow').hide();
         });
-
     });
 }
 
@@ -113,4 +117,17 @@ function showTip(btn){
          },2000);*/
         return false;
     })
+}
+function scrollShow(){
+    $(window).on('scroll',function(){
+        var contentH=$('.main').height();
+        var  viewH = $(this).height();//可见高度
+    //    var contentH = $(this).get(0).scrollHeight;//内容高度
+        var scrollTop = $(this).scrollTop();//滚动高度
+        if (scrollTop + viewH >= contentH)
+        {
+            alert(1);
+        }
+    });
+
 }

@@ -57,8 +57,11 @@ button,input,select,textarea{font:inherit;border:0;outline:0;-webkit-appearance:
 .list li p span.lct{ padding-left:1.3rem; background:url(../images/location.png) left center no-repeat;  background-size:1rem 1.2rem;}
 .bor-bt{ border-bottom:1px solid #e5e5e5;}
 .txt-list{ font-size:1.5rem;}
-.txt-list li{ padding:1.3rem 1.5rem 1.2rem; line-height:2.7rem; border-bottom:1px solid #f2f2f2; }
-.txt-list li p span{ color:#2b8afe; margin-right:1rem;}
+.txt-list li{ padding:1.3rem 1.5rem 1.2rem; line-height:2.2rem; border-bottom:1px solid #f2f2f2; }
+.txt-list li p span{ color:#2b8afe;}
+.txt-list li p span.type{float: left;width:16%;}
+.txt-list li p span.con{float:left;width:84%;color:#333;white-space: normal;}
+
 .txt-list li .sub{ font-size:1.3rem; color:#999;}
 .sep{ height:1rem; background-color:#efeff4;}
 .txt-list li a p{ width:100%;text-overflow:ellipsis;white-space:nowrap; overflow:hidden;}
@@ -86,11 +89,11 @@ button,input,select,textarea{font:inherit;border:0;outline:0;-webkit-appearance:
 .slt-area .slt-list{display: block;height:0;width:100%;overflow-y:hidden;position:absolute;}
 .slt-area .slt-list li{display: block;border:none;}
 .slt-area .slt-list li.active .name,.slt-area-1 .slt-list li.active{background: #fff;border-right:none;color:#2c8aff;}
-.slt-area .slt-list li .name{display:block;height:33%;padding-right:0;text-align:left;border-bottom:1px solid #e5e5e5;background: #f7f7f7 url(../images/more.png)no-repeat 90% center;background-size:8px 14px;border-right:1px solid #e5e5e5;
+.slt-area .slt-list li .name{display:block;padding-right:0;text-align:left;border-bottom:1px solid #e5e5e5;background: #f7f7f7 url(../images/more.png)no-repeat 90% center;background-size:8px 14px;border-right:1px solid #e5e5e5;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;line-height:3.5rem;width:10.3rem;font-size: 1.4rem;}
-.slt-area .slt-list .slt-second-list{display:block;height:0;overflow-y:hidden;position: absolute;top:-1px;left:33%;width:67%;}
+  box-sizing: border-box;line-height:3.5rem;width:33%;font-size: 1.4rem;}
+.slt-area .slt-list .slt-second-list{display:block;height:0;overflow-y:hidden;position: absolute;background:#fff;left:33%;width:67%;}
 .slt-area .slt-list .slt-second-list li{background: #fff;border-bottom:1px solid #e5e5e5;color:#333;}
 .slt-area .slt-list .slt-second-list li.active{background: #fff url(../images/right-icon.png) no-repeat 1rem center;color:#2c8aff;background-size: 12px 8px}
 .shadow{display:none;position: fixed;top:0;right:0;left:0;width:100%;background: rgba(0,0,0,0.6);height:100%;}

@@ -4,7 +4,9 @@ $(function() {
     showHd();
     downList($('.hd-button .name'));//wrong-topic.html错题类型筛选
     currentAndSum();//显示当前题目总数与当前第几题
-    function swipers() {};
+    showBigPic();//单击放大显示图片
+
+/*   function swipers() {};
     swipers.prototype.slider = function(tagName, propo) {
         document.addEventListener('touchmove', function(event) {
             event.preventDefault();
@@ -22,7 +24,7 @@ $(function() {
             //如果是小题且是最后一个选项则不滑动本身，但是触发上一层的滑动事件
             if ($(this).parent().hasClass('small-questions') && $(this).index() == $(this).parent().children().length - 1) {
             } else {
-                event.stopPropagation();
+               // event.stopPropagation();
                 blt.swipe(this, 1, _len - 1, propo);
             }
         });
@@ -30,7 +32,7 @@ $(function() {
             if ($(this).parent().hasClass('small-questions') && $(this).index() == 0) {
                 //如果是小题且是第一个选项则不滑动本身，但是触发上一层的滑动事件
             } else {
-                event.stopPropagation();
+                //event.stopPropagation();
                 blt.swipe(this, -1, 0, propo);
             }
         });
@@ -71,22 +73,12 @@ $(function() {
             var quesid = $next.attr('data-quesid');
         }
 
-        //切换题号
-        /*        var currentChoose = $('.question_count_num .question_choose[data-quesid="' + quesid + '"]')
-         $(".question_count_num .question_choose").removeClass("current");
-         currentChoose.addClass("current");
-         $('#question_num').text(currentChoose.html());*/
-
         //是大题 初始化大题题干的滚动
         if ($('.section_list .aside_section').eq(index + value).find(".more_msg").length) {
             myScroll = new IScroll($('.section_list .aside_section').eq(index + value).find(".more_msg")[0]);
         }
 
         if (!$(key).parent().hasClass('small-questions')) {
-            //初始化第一个选项滚动
-            /* if ($('.section_list .aside_section').eq(index + value).find(".question_choose_list").length) {
-             myQScroll = new IScroll($('.section_list .aside_section').eq(index + value).find(".question_choose_list")[0]);
-             }*/
             //整体滚动-上面三行改为：
             if($('.section_list .aside_section').eq(index + value).find('.question_scroll').length){
                 myQScroll = new IScroll($('.section_list .aside_section').eq(index + value).find('.question_scroll').parent()[0]);
@@ -99,10 +91,6 @@ $(function() {
             }
 
         } else {
-            //初始化选项区域的滚动
-            /* if ($(key).parent().find(">li").eq(index + value).length) {
-             myQScroll = new IScroll($(key).parent().find(".question_choose_list").eq(index + value)[0]);
-             }*/
             //整体滚动-上面三行改为：
             if($(key).parent().parent().find('.small-questions>li').eq(index + value).length){
                 myQScroll = new IScroll($(key).parent().parent().find('.small-questions>li').eq(index + value)[0]);
@@ -110,12 +98,10 @@ $(function() {
         }
         return this;
     }
-
     //滑动切换题目
     var blt = (function() {
         return new swipers();
     })();
-
     //普通大题的滑动事件
     var _img = $(".section_list>section");
     blt.slider(_img, $(".section_list>section"));
@@ -128,10 +114,6 @@ $(function() {
     if ($('.section_list .aside_section .more_msg')) {
         myScroll = new IScroll(".question_title_more .more_msg");
     }
-    //初始化第一个题目的选项区域滚动
-    /*if ($('.section_list .aside_section .question_choose_list')) {
-        myQScroll = new IScroll(".question_choose_list");
-    }*/
     //整体滚动-上面的三行改为：
     if ($('.section_list .aside_section')) {
         myQScroll = new IScroll(".section_list .aside_section");
@@ -179,9 +161,7 @@ $(function() {
             }
         }
     });
-
-
-    $('.question_order .question_choose[data-quesid="114"]').trigger("tap");
+    $('.question_order .question_choose[data-quesid="114"]').trigger("tap");*/
 });
 
 /*查看解析*/
@@ -300,7 +280,6 @@ SelectItem.prototype.sure=function(btn){
             $('.down-box').hide().prev('.name').removeClass('active');
         }
     });
-
 };
 
 /*显示当前题目个数以及当前题号*/
@@ -310,4 +289,51 @@ function currentAndSum(){
   $('.question_sum').text(sum);
     $('.question_num').text(current);
 }
+window.onload=showBigPic;
+/*点击图片放大显示*/
+function showBigPic() {
+    $('.section_list').on('tap', 'img', function (e) {
+        var src=$(this).attr('src');
+        var wd=$(window).width();
+        var imgArr=[];
+        var items='';
+        $('.section_list').find('img').each(function(index,val){
+            imgArr.push($(val).attr('src'));
 
+        });
+        var index=imgArr.indexOf(src);
+        for(var i=index;i<imgArr.length;i++){
+            items+="<div class='pic'><img src='"+imgArr[i]+"'></div>";
+        }
+        for(var j=0;j<index;j++){
+            items+=" <div class='pic'><img src='"+imgArr[j]+"'></div>";
+        }
+        console.log(index);
+        /*将获取到的所有图片有序的插入到body中*/
+        $('body').append($("<div class='big-pic'><div class='flow-box clearfix'>"+items+"</div></div>"));
+        $('.flow-box').width(wd*imgArr.length);
+
+        /*所有图片添加触摸放大效果*/
+        $('div.pic').each(function () {
+            new RTP.PinchZoom($(this), {zoomOutFactor:3});
+        });
+
+        /*图片加载触摸放大功能之后添加左右滑动功能*/
+        $(".pinch-zoom-container").on('swipeRight', function (e) {
+            e.preventDefault();
+            var index = $(this).index();
+            if (index > 0) {
+                $(this).parents('.flow-box').animate({left: -(index - 1) * wd});
+            }
+            e.stopPropagation();
+        });
+        $(".pinch-zoom-container").on('swipeLeft', function (e) {
+            e.preventDefault();
+            var index = $(this).index();
+            if (index <imgArr.length-1) {
+                $(this).parents('.flow-box').animate({left: -(index+1) * wd});
+            }
+            e.stopPropagation();
+        });
+    });
+}

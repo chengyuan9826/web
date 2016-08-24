@@ -35,17 +35,20 @@ function downList(btn, shadow) {
         if ($(this).hasClass('active')) {
             $(this).next('ul').animate({height: '0', overflow: 'hidden'});
             $(this).removeClass('active');
+            $('body').css('overflow','auto');
             shadow.hide();
         }
         else {
             btn.removeClass('active').next('ul').animate({'height': '0', overflowY: 'hidden'});
             $(this).addClass('active').next('ul').animate({'height': '10rem', overflowY: 'auto'});
+            $('body').css('overflow','hidden');
             shadow.show();
         }
     });
     shadow.on('tap', function () {
         btn.next('ul').animate({height: '0', overflow: 'hidden'});
         btn.removeClass('active');
+        $('body').css('overflow','auto');
         $(this).hide();
     })
 }
@@ -56,6 +59,7 @@ function showSelect(list,shadow) {
         $(this).siblings('li').removeClass('active');
         $(this).addClass('active').parents('ul').prev().removeClass('active').text(txt);
         list.animate({height: '0', overflow: 'hidden'});
+        $('body').css('overflow','auto');
        shadow.hide();
         return false;
     });

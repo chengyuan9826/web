@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinchzoom.js插件实现手指触摸图片放大缩小</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        .section_list img{max-width:100%; }
+        .big-pic{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;background: rgba(0,0,0,0.8);text-align: center;z-index: 9999;  }
+        .flow-box{position: relative;left:0;top:0;height:100%;
+            display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;
+            -webkit-box-pack:justify;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;
+            -webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;}
+        .big-pic .pinch-zoom-container{float: left;}
+        .clearfix:after{display:block;content:"\20";height:0;clear:both;overflow:hidden;visibility:hidden}
+        .clearfix{*zoom:1}
+    </style>
+</head>
+<body>
+<!-- 代码部分begin -->
+<div class="section_list">
+    <img src="images/clt.png" />
+   <div><span><img src="images/conimg1.png" alt=""></span></div>
+    <div>
+        <img src="images/coll-pic.png" alt="">
+    </div>
+</div>
+<script src="js/zepto.js"></script>
+<script src="js/pinchzoom.js"></script>
+<script type="text/javascript">
+    $(function () {
+        showBigPic();
+    });
+    /*点击图片放大显示*/
+    function showBigPic() {
+        $('.section_list').on('click', 'img', function (e) {
+            var src=$(this).attr('src');
+            var wd=$(window).width();
+            var imgArr=[];
+            var items='';
+
+            $('.section_list').find('img').each(function(index,val){
+                imgArr.push($(val).attr('src'));
+
+            });
+            var index=imgArr.indexOf(src);
+            for(var i=index;i<imgArr.length;i++){
+                items+="<div class='pic'><img src='"+imgArr[i]+"'></div>";
+            }
+            for(var j=0;j<index;j++){
+                items+=" <div class='pic'><img src='"+imgArr[j]+"'></div>";
+            }
+            console.log(index);
+            /*将获取到的所有图片有序的插入到body中*/
+            $('body').append($("<div class='big-pic'><div class='flow-box clearfix'>"+items+"</div></div>"));
+             $('.flow-box').width(wd*imgArr.length);
+
+            /*所有图片添加触摸放大效果*/
+            $('div.pic').each(function () {
+                new RTP.PinchZoom($(this), {zoomOutFactor:3,maxZoom:5});
+            });
+
+            /*图片加载触摸放大功能之后添加左右滑动功能*/
+            $(".pinch-zoom-container").on('swipeRight', function (e) {
+                e.preventDefault();
+                var index = $(this).index();
+                if (index > 0) {
+                    $(this).parents('.flow-box').animate({left: -(index - 1) * wd});
+                }
+                e.stopPropagation();
+            });
+            $(".pinch-zoom-container").on('swipeLeft', function (e) {
+                e.preventDefault();
+                var index = $(this).index();
+                if (index <imgArr.length-1) {
+                    $(this).parents('.flow-box').animate({left: -(index+1) * wd});
+                }
+                e.stopPropagation();
+            });
+            $('.big-pic').on('touchend',function(event){
+                $(this).hide();
+                event.preventDefault();
+            });
+        });
+    }
+</script>
+<!-- 代码部分end -->
+</body>
+</html>
